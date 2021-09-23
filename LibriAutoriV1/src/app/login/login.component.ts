@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO
   error = 0;
   errorState = false;
+  welcome = false;
 
   submit() {
 
@@ -43,7 +44,8 @@ export class LoginComponent implements OnInit {
 
       // SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
       if (users[i].user == usernameInput && users[i].email == emailInput && users[i].pwd == pwdInput) {
-        alert("OK");
+        this.errorState = false;
+        this.welcome = true;
         break
       } else {
         this.error++;
@@ -51,7 +53,6 @@ export class LoginComponent implements OnInit {
 
       // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
       if (this.error == users.length) {
-        alert("KO");
         this.errorState = true;
         console.log(this.errorState);
       }

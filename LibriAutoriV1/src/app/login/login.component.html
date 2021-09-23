@@ -1,3 +1,9 @@
+<div class="alert alert-danger" role="alert" *ngIf="errorState">
+  Login Error! Please Retry
+</div>
+<div class="alert alert-success" role="alert" *ngIf="welcome">
+  Welcome!! (^.^)
+</div>
 <div class="form-floating mb-3">
   <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username">
   <label for="floatingInput">Username</label>
