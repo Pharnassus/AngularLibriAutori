@@ -1,0 +1,17 @@
+[
+  {
+    "user" : "user",
+    "email" : "user@mail.com",
+    "pwd" : "user"
+  },
+  {
+    "user" : "pippo",
+    "email" : "pippo@mail.com",
+    "pwd" : "pippo"
+  },
+  {
+    "user" : "pluto",
+    "email" : "pluto@mail.com",
+    "pwd" : "pluto"
+  }
+]
