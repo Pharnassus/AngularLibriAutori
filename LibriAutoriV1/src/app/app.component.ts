@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+// IMPORT PER IL JSON
 // import users from '../assets/users.json';
 
 @Component({
