@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
+//IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import users from '../_services/users.json';
+
+// IMPORT PER IL REDIRECT DELLE PAGINE [pt.1]
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +13,8 @@ import users from '../_services/users.json';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  // AGGIUNTA "private router: Router" ALL'INTERNO DEL COSTRUTTORE PER IL REDIRECT DELLA PAGINA NELLA FUNZIONE SUBMIT [pt.2]
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -37,9 +43,10 @@ export class LoginComponent implements OnInit {
     const usernameInput= this.username;
     const emailInput= this.email;
     const pwdInput= this.pwd;
-    // console.log("user is " + user,"\n",
-    //             "email is " + email,"\n",
-    //             "password is " + pwd,"\n",
+    // CONTROLLO STAMPE INPUT E RICERCA JSON
+    // console.log("user is " + usernameInput,"\n",
+    //             "email is " + emailInput,"\n",
+    //             "password is " + pwdInput,"\n",
     //             "JSON utenti:" + users[0].email,
     //             );
 
@@ -53,6 +60,8 @@ export class LoginComponent implements OnInit {
       if (users[i].user == usernameInput && users[i].email == emailInput && users[i].pwd == pwdInput) {
         this.errorState = false;
         this.welcome = true;
+        // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
+        this.router.navigate(['/home']);
         break
       } else {
         this.error++;
