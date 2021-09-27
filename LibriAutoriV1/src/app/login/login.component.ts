@@ -43,7 +43,6 @@ export class LoginComponent implements OnInit {
   submit() {
 
     const usernameInput = this.username;
-    // const emailInput = this.email;
     const pwdInput = this.pwd;
     // CONTROLLO STAMPE INPUT E RICERCA JSON
     // console.log("user is " + usernameInput,"\n",

@@ -1,10 +1,30 @@
 <!--  alert messages -->
-<div class="alert alert-danger" role="alert" *ngIf="errorState">
+<!-- <div class="alert alert-danger" role="alert" *ngIf="errorState">
   <span>Login Error!</span>
   <span>error in one or more input fields</span>
   <span>Please Retry or Login</span>
+</div> -->
+<div class="alert alert-danger" role="alert" *ngIf="errorStateEmpty">
+  <span>Empty fields!</span>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="errorStatePwd">
+  <span>Le password non coincidono</span>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="errorStateEmail">
+  <span>Email error</span>
 </div>
 
+<!-- div per il redirect alla home -->
+<div id="m_loginSuccess" *ngIf="welcome">
+  <h1 class="alert" role="alert">Registrazione avvenuta con successo</h1>
+  <h2>Effettua il tuo primo login di verifica</h2>
+  <h3>Solo un attimo...</h3>
+  <div class="m_spinnerSuccess spinner-border text-dark" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<!-- sezione form -->
 <form class="row g-3 needs-validation" novalidate>
 
   <div class="form-floating mb-3">
@@ -55,3 +75,14 @@
   </div>
 
 </form>
+
+<!-- stampa tutto il json -->
+<div>
+  <p *ngFor="let item of usersList">
+    {{item.firstName}} |
+    {{item.lastName}} |
+    {{item.user}} |
+    {{item.email}} |
+    {{item.pwd}}
+  </p>
+</div>

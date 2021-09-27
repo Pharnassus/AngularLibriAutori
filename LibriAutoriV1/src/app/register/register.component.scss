@@ -1,3 +1,35 @@
+#m_loginSuccess {
+  background-color: #d4edda;
+  position: absolute;
+  top: 13%;
+  left: 20%;
+  z-index: 2;
+  height: 400px;
+  width: 60%;
+  border-radius: 7px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 4px 17px 4px rgba(87, 83, 83, 0.75);
+  -moz-box-shadow: 3px 4px 17px 4px rgba(87, 83, 83, 0.75);
+  box-shadow: 3px 4px 17px 4px rgba(87, 83, 83, 0.75);
+  text-align: center;
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  h3 {
+    margin-top: 50px;
+  }
+
+  .m_spinnerSuccess {
+    margin-top: 15px;
+  }
+}
+
 form {
   justify-content: space-between;
   flex-wrap: wrap;

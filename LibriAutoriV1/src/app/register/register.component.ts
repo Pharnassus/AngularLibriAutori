@@ -40,35 +40,85 @@ export class RegisterComponent implements OnInit {
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
   error = 0;
   errorState = false;
+  errorStateEmpty = false;
+  errorStatePwd = false;
+  errorStateEmail = false;
   welcome = false;
   spinner = false;
 
   register() {
 
+    const firstName = this.firstName;
+    const lastName = this.lastName;
     const usernameInput = this.username;
     const emailInput = this.email;
     const pwdInput = this.pwd;
-    // CONTROLLO STAMPE INPUT E RICERCA JSON
-    // console.log("user is " + usernameInput,"\n",
-    //             "email is " + emailInput,"\n",
-    //             "password is " + pwdInput,"\n",
-    //             "JSON utenti:" + users[0].email,
-    //             );
+    const pwdRepeat = this.pwdRepeat;
+
 
     //attiva il login spinner
     this.spinner = true;
+    this.error = 0;
 
     // CICLA IL JSON
     for (let i = 0; i < users.length; i++) {
 
-      // CICLA TUTTI GLI UTENTI; STESSA COSA POTRAI FARLA CON IL RESTO DELLE CHIAVI DEL JSON
+      // [test]CICLA TUTTI GLI UTENTI; STESSA COSA POTRAI FARLA CON IL RESTO DELLE CHIAVI DEL JSON
       // console.log(users[i].user);
 
-      // SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
-      if (users[i].user == usernameInput && users[i].pwd == pwdInput) {//users[i].email == emailInput &&
+      // [ciclo] controlla se gli input iniziali so vuoti o meno
+      if ((<HTMLInputElement>document.getElementById('floatingFN')).value == ''
+        || (<HTMLInputElement>document.getElementById('floatingLN')).value == ''
+        || (<HTMLInputElement>document.getElementById('floatingUN')).value == ''
+        || (<HTMLInputElement>document.getElementById('floatingEmail')).value == ''
+        || (<HTMLInputElement>document.getElementById('floatingPassword')).value == ''
+        || (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '') {
+        this.spinner = false;
+        this.errorStatePwd = false;
+        this.errorStateEmpty = true;
+        this.error == 1;
+      }
+
+      // else if (emailInput.includes("@") == false
+      //   || emailInput.includes(".it") == false
+      //   || emailInput.includes(".com") == false
+      //   || emailInput.includes(".tech") == false) {
+      //   this.spinner = false;
+      //   this.errorStateEmpty = false;
+      //   this.errorStateEmail = true;
+      //   this.error == 1;
+      // }
+
+      else if (pwdInput != pwdRepeat) {
+        this.spinner = false;
+        this.errorStateEmpty = false;
+        this.errorStatePwd = true;
+        this.error == 1;
+      }
+
+      // una volta trovato l'oggetto con i valori test dovrà "memorizzarli"
+      else if (users[i].firstName == "test"
+        && users[i].lastName == "test"
+        && users[i].user == "test"
+        && users[i].email == "test"
+        && users[i].pwd == "test"
+        && this.error == 0) {
 
         //per far sparire il banner di errore in caso di successivo login corretto
-        this.errorState = false;
+        // this.errorState = false;
+        this.errorStateEmpty = false;
+        this.errorStatePwd = false;
+        this.errorStateEmail = false;
+
+        // "memorizza" nel json
+        users[i].firstName = firstName;
+        users[i].lastName = lastName;
+        users[i].user = usernameInput;
+        users[i].email = emailInput;
+        users[i].pwd = pwdInput;
+
+        console.log(users);
+
 
         //timeout per finto caricamento
         setTimeout(() => {
@@ -77,39 +127,14 @@ export class RegisterComponent implements OnInit {
 
           // se welcome è true parte l'ngIf nell'html
           this.welcome = true;
-
-          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-          // this.router.navigate(['/home']);
         }, 1500);
 
         //simulazione delay reindirizzamento alla home
         setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-          this.router.navigate(['/home']);
+          this.router.navigate(['/login']);
         }, 4500);
 
-        break
-
-      } else {
-        this.error++;
-      }
-
-      // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
-      if (this.error == users.length) {
-
-
-        setTimeout(() => {
-          this.spinner = false;
-          this.error = 0;
-        }, 1000);
-
-        setTimeout(() => {
-          //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
-          (<HTMLInputElement>document.getElementById('floatingInput')).value = '';
-          (<HTMLInputElement>document.getElementById('floatingPassword')).value = '';
-          this.errorState = true;
-          // console.log(this.errorState);
-        }, 1500);
       }
     }
 
