@@ -14,13 +14,20 @@ export class LoginComponent implements OnInit {
 
   }
 
+  //usersList sarà l'array di oggetti che potri usare con l'*ngFor e dovrà avere la stessa struttura del json
+  usersList:{
+    user: String,
+    email: String,
+    pwd: String
+  }[]=users;
+
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER RECUPERARE I DATI DALL'INPUT
   username : number;
   email : string;
   pwd : string;
 
-  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO
+  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
   error = 0;
   errorState = false;
   welcome = false;
