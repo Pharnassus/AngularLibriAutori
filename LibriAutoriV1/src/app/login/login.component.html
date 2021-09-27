@@ -1,23 +1,37 @@
+<!--  alert messages -->
 <div class="alert alert-danger" role="alert" *ngIf="errorState">
   Login Error! Please Retry
 </div>
 <div class="alert alert-success" role="alert" *ngIf="welcome">
   Welcome!! (^.^)
 </div>
+
+<!-- div per il redirect alla home -->
+<div id="m_loginSuccess">
+
+</div>
+
 <div class="form-floating mb-3">
   <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username">
   <label for="floatingInput">Username</label>
 </div>
-<div class="form-floating mb-3">
+<!-- <div class="form-floating mb-3">
   <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email">
   <label for="floatingInput">Email address</label>
-</div>
+</div> -->
 <div class="form-floating">
   <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="pwd">
   <label for="floatingPassword">Password</label>
 </div>
-<button type="button" class="btn btn-primary" (click)="submit()">Login</button>
 
-<div>
-  <p *ngFor="let item of usersList">{{item.user}} | {{item.email}} | {{item.pwd}}</p>
+<div id="m_loginSpinnerContainer">
+  <button type="button" class="btn btn-primary" (click)="submit()">Login</button>
+  <div class="m_spinnerLogin spinner-border text-primary" role="status" *ngIf="spinner">
+    <span class="visually-hidden">Loading...</span>
+  </div>
 </div>
+
+<!-- stampa tutto il json -->
+<!-- <div>
+  <p *ngFor="let item of usersList">{{item.user}} | {{item.email}} | {{item.pwd}}</p>
+</div> -->

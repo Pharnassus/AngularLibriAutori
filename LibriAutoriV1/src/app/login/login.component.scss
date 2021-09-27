@@ -2,6 +2,21 @@ div:first-of-type {
   margin-top: 20px;
 }
 
-button{
-  margin-top: 20px
+button {
+  margin-top: 20px;
+}
+
+#m_loginSpinnerContainer {
+
+  position: relative;
+  // background-color: green;
+
+  .m_spinnerLogin {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    float: none;
+    top: 17%;
+    left: 17%;
+  }
 }

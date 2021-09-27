@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   // AGGIUNTA "private router: Router" ALL'INTERNO DEL COSTRUTTORE PER IL REDIRECT DELLA PAGINA NELLA FUNZIONE SUBMIT [pt.2]
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
 
   ngOnInit() {
 
@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
   error = 0;
   errorState = false;
   welcome = false;
+  spinner = false;
 
   submit() {
 
@@ -50,6 +51,8 @@ export class LoginComponent implements OnInit {
     //             "JSON utenti:" + users[0].email,
     //             );
 
+    this.spinner = true;
+
     // CICLA IL JSON
     for (let i = 0; i < users.length; i++) {
 
@@ -57,12 +60,31 @@ export class LoginComponent implements OnInit {
       // console.log(users[i].user);
 
       // SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
-      if (users[i].user == usernameInput && users[i].email == emailInput && users[i].pwd == pwdInput) {
+      if (users[i].user == usernameInput && users[i].pwd == pwdInput) {//users[i].email == emailInput &&
+
+        //per far sparire il banner di errore in caso di successivo login corretto
         this.errorState = false;
-        this.welcome = true;
-        // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-        this.router.navigate(['/home']);
-        break
+
+        //timeout per finto caricamento
+        setTimeout (() => {
+          //termina la visualizzazione dello spinner login
+          this.spinner = false;
+
+          // se welcome è true parte l'ngIf nell'html
+          this.welcome = true;
+
+          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
+          // this.router.navigate(['/home']);
+       }, 1000);
+
+        setTimeout (() => {
+          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
+          this.router.navigate(['/home']);
+       }, 2000);
+
+
+
+          break
       } else {
         this.error++;
       }
@@ -70,7 +92,7 @@ export class LoginComponent implements OnInit {
       // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
       if (this.error == users.length) {
         this.errorState = true;
-        console.log(this.errorState);
+        // console.log(this.errorState);
       }
 
     }
