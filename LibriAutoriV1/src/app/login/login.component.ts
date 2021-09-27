@@ -21,17 +21,17 @@ export class LoginComponent implements OnInit {
   }
 
   //usersList sarà l'array di oggetti che potri usare con l'*ngFor e dovrà avere la stessa struttura del json
-  usersList:{
+  usersList: {
     user: String,
     email: String,
     pwd: String
-  }[]=users;
+  }[] = users;
 
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER RECUPERARE I DATI DALL'INPUT
-  username : number;
-  email : string;
-  pwd : string;
+  username: string;
+  email: string;
+  pwd: string;
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
   error = 0;
@@ -41,9 +41,9 @@ export class LoginComponent implements OnInit {
 
   submit() {
 
-    const usernameInput= this.username;
-    const emailInput= this.email;
-    const pwdInput= this.pwd;
+    const usernameInput = this.username;
+    const emailInput = this.email;
+    const pwdInput = this.pwd;
     // CONTROLLO STAMPE INPUT E RICERCA JSON
     // console.log("user is " + usernameInput,"\n",
     //             "email is " + emailInput,"\n",
@@ -51,6 +51,7 @@ export class LoginComponent implements OnInit {
     //             "JSON utenti:" + users[0].email,
     //             );
 
+    //attiva il login spinner
     this.spinner = true;
 
     // CICLA IL JSON
@@ -66,7 +67,7 @@ export class LoginComponent implements OnInit {
         this.errorState = false;
 
         //timeout per finto caricamento
-        setTimeout (() => {
+        setTimeout(() => {
           //termina la visualizzazione dello spinner login
           this.spinner = false;
 
@@ -75,17 +76,16 @@ export class LoginComponent implements OnInit {
 
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           // this.router.navigate(['/home']);
-       }, 1500);
+        }, 1500);
 
-       //simulazione delay reindirizzamento alla home
-        setTimeout (() => {
+        //simulazione delay reindirizzamento alla home
+        setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
-       }, 4500);
+        }, 4500);
 
+        break
 
-
-          break
       } else {
         this.error++;
       }
@@ -93,16 +93,20 @@ export class LoginComponent implements OnInit {
       // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
       if (this.error == users.length) {
 
-        setTimeout (() => {
+
+        setTimeout(() => {
           this.spinner = false;
+          this.error = 0;
         }, 1000);
 
-        setTimeout (() => {
+        setTimeout(() => {
+          //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
+          (<HTMLInputElement>document.getElementById('floatingInput')).value = '';
+          (<HTMLInputElement>document.getElementById('floatingPassword')).value = '';
           this.errorState = true;
           // console.log(this.errorState);
         }, 1500);
       }
-
     }
 
     //VALIDAZIONI FORM BOOTSTRAP
