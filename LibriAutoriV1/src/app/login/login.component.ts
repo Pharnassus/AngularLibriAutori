@@ -75,12 +75,13 @@ export class LoginComponent implements OnInit {
 
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           // this.router.navigate(['/home']);
-       }, 1000);
+       }, 1500);
 
+       //simulazione delay reindirizzamento alla home
         setTimeout (() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
-       }, 2000);
+       }, 3500);
 
 
 
