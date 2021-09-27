@@ -4,6 +4,9 @@
   <span>Wrong username or password!</span>
   <span>Please Retry or Register</span>
 </div>
+<div class="alert alert-danger" role="alert" *ngIf="errorStateEmpty">
+  <span>Empty fields!</span>
+</div>
 
 <!-- div per il redirect alla home -->
 <div id="m_loginSuccess" *ngIf="welcome">
@@ -15,19 +18,17 @@
   </div>
 </div>
 
+<!-- sezione form -->
 <form class="row g-3 needs-validation" novalidate>
 
   <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required>
+    <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username"
+      [ngModelOptions]="{standalone: true}" required>
     <label for="floatingInput">Username</label>
   </div>
-  <!-- sezione input eail che per il login non serve, ma dovrò poi aggiungerlo al register -->
-  <!-- <div class="form-floating mb-3">
-  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" [(ngModel)]="email">
-  <label for="floatingInput">Email address</label>
-</div> -->
   <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}" required>
+    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="pwd"
+      [ngModelOptions]="{standalone: true}" required>
     <label for="floatingPassword">Password</label>
   </div>
 

@@ -36,13 +36,14 @@ export class LoginComponent implements OnInit {
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
   error = 0;
   errorState = false;
+  errorStateEmpty = false;
   welcome = false;
   spinner = false;
 
   submit() {
 
     const usernameInput = this.username;
-    const emailInput = this.email;
+    // const emailInput = this.email;
     const pwdInput = this.pwd;
     // CONTROLLO STAMPE INPUT E RICERCA JSON
     // console.log("user is " + usernameInput,"\n",
@@ -54,21 +55,31 @@ export class LoginComponent implements OnInit {
     //attiva il login spinner
     this.spinner = true;
 
+
     // CICLA IL JSON
     for (let i = 0; i < users.length; i++) {
 
-      // CICLA TUTTI GLI UTENTI; STESSA COSA POTRAI FARLA CON IL RESTO DELLE CHIAVI DEL JSON
+      // [test]CICLA TUTTI GLI UTENTI; STESSA COSA POTRAI FARLA CON IL RESTO DELLE CHIAVI DEL JSON
       // console.log(users[i].user);
 
-      // SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
-      if (users[i].user == usernameInput && users[i].pwd == pwdInput) {//users[i].email == emailInput &&
+      // [ciclo] controlla se gli input iniziali so vuoti o meno
+      if ((<HTMLInputElement>document.getElementById('floatingPassword')).value == '' || (<HTMLInputElement>document.getElementById('floatingInput')).value == '' ) {
+        this.spinner = false;
+        this.error = 0;
+        this.errorStateEmpty = true;
 
-        //per far sparire il banner di errore in caso di successivo login corretto
+      }
+      // [ciclo] SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
+      // .replace(/\s+/g, '') serve ad eliminare gli spazi bianchi prima, dopo o dentro una stringa
+      else if (users[i].user == usernameInput.replace(/\s+/g, '') && users[i].pwd == pwdInput.replace(/\s+/g, '')) {
+
+        // per far sparire il banner di errore in caso di successivo login corretto
         this.errorState = false;
+        this.errorStateEmpty = false;
 
-        //timeout per finto caricamento
+        // timeout per finto caricamento
         setTimeout(() => {
-          //termina la visualizzazione dello spinner login
+          // termina la visualizzazione dello spinner login
           this.spinner = false;
 
           // se welcome è true parte l'ngIf nell'html
@@ -78,7 +89,7 @@ export class LoginComponent implements OnInit {
           // this.router.navigate(['/home']);
         }, 1500);
 
-        //simulazione delay reindirizzamento alla home
+        // simulazione delay reindirizzamento alla home
         setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
@@ -93,17 +104,19 @@ export class LoginComponent implements OnInit {
       // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
       if (this.error == users.length) {
 
-
+        // scomparsa dopo un secondo dello spinner ed azzera in contatore degli utenti non trovati
         setTimeout(() => {
           this.spinner = false;
           this.error = 0;
         }, 1000);
 
+        // azzera i valori degli input dopo 1.5 secondi e stampa un messaggio di errore eliminando l'altro (errore campi vuoti)
         setTimeout(() => {
           //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
           (<HTMLInputElement>document.getElementById('floatingInput')).value = '';
           (<HTMLInputElement>document.getElementById('floatingPassword')).value = '';
           this.errorState = true;
+          this.errorStateEmpty = false;
           // console.log(this.errorState);
         }, 1500);
       }

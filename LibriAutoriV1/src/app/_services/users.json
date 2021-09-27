@@ -1,17 +1,30 @@
 [
   {
+    "firstName" : "gino",
+    "lastName" : "postino",
     "user" : "user",
     "email" : "user@mail.com",
     "pwd" : "user"
   },
   {
+    "firstName" : "torta",
+    "lastName" : "salata",
     "user" : "pippo",
     "email" : "pippo@mail.com",
     "pwd" : "pippo"
   },
   {
+    "firstName" : "federico",
+    "lastName" : "lombrico",
     "user" : "pluto",
     "email" : "pluto@mail.com",
     "pwd" : "pluto"
+  },
+  {
+    "firstName" : "test",
+    "lastName" : "test",
+    "user" : "test",
+    "email" : "test",
+    "pwd" : "test"
   }
 ]
