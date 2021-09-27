@@ -81,7 +81,7 @@ export class LoginComponent implements OnInit {
         setTimeout (() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
-       }, 3500);
+       }, 4500);
 
 
 
@@ -92,11 +92,35 @@ export class LoginComponent implements OnInit {
 
       // SE CICLA TUTTO IL JSON E NON TROVA CORRISPONDENZE CON GLI UTENTI ALLORA STAMPA UN MESSAGGIO DI ERRORE
       if (this.error == users.length) {
-        this.errorState = true;
-        // console.log(this.errorState);
+
+        setTimeout (() => {
+          this.spinner = false;
+        }, 1000);
+
+        setTimeout (() => {
+          this.errorState = true;
+          // console.log(this.errorState);
+        }, 1500);
       }
 
     }
+
+    //VALIDAZIONI FORM BOOTSTRAP
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
 
   }
 
