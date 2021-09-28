@@ -1,3 +1,9 @@
-<p>
-  home works!
-</p>
+<div>
+  <ul *ngFor="let item of books_authorsList">
+    <li>Title: {{item.name}}</li>
+    <li>Author: {{item.author.name}}</li>
+    <li>Gender: {{item.author.gender}}</li>
+    <li>Genre: {{item.genre}}</li>
+    <li>Publish date: {{item.publish_date}}</li>
+  </ul>
+</div>
