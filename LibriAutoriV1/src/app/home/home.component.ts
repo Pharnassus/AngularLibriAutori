@@ -33,14 +33,11 @@ export class HomeComponent implements OnInit {
   cardsShow = false;
   spinner = false;
   arrayBooks: any[] = [];
-  x: number;
 
   searchBookFunction() {
 
     let searchBookInput = this.searchBookInput;
-    let x = this.x;
-    x = 0;
-    //cancella l'array ad ogni click cosi da non duplicarlo
+    // cancella l'array ad ogni click cosi da non duplicarlo
     if (this.arrayBooks.length >= 0) {
       while (this.arrayBooks.length) {
         this.arrayBooks.pop();
@@ -73,10 +70,6 @@ export class HomeComponent implements OnInit {
 
         //pusha la ricerca in un array provvisorio istanziato prima
         this.arrayBooks.push(books_authors[i]);
-        // this.arrayBooks[x] += this.arrayBooks.push(books_authors[i]);
-        console.log(books_authors[i]);
-        x++;
-
         console.log(this.arrayBooks);
 
         //solo per grafica: ritarda di mezzo secondo la visualizzazione
