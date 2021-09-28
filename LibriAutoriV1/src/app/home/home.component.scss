@@ -9,6 +9,9 @@
     input {
       text-align: center;
     }
+    input:focus{
+      box-shadow: none;
+    }
   }
 
   // sezione pulsante login
