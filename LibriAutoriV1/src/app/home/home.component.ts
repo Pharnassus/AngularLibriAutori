@@ -33,6 +33,7 @@ export class HomeComponent implements OnInit {
   cardsShow = false;
   spinner = false;
   arrayBooks: string[] = [];
+  x: number;
 
   searchBookFunction() {
 
@@ -51,12 +52,15 @@ export class HomeComponent implements OnInit {
         //prende l'input, lo trasforma in minuscolo, toglie gli spazi e confronta con un match nel json a cui vengono applicate le stesse regole
         (searchBookInput).toLowerCase().replace(/\s+/g, '') == ((books_authors[i].name).toLowerCase().replace(/\s+/g, '')) ||
         (searchBookInput).toLowerCase().replace(/\s+/g, '') == ((books_authors[i].author.name).toLowerCase().replace(/\s+/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/\s+/g, '') == ((books_authors[i].genre).toLowerCase().replace(/\s+/g, '')) ||
         //la funzione includes è booleana: se la propr name nel json (in minuscolo e senza spazi) include l'input con le stesse regole allora è true
         ((books_authors[i].name).toLowerCase().replace(/\s+/g, '').includes((searchBookInput).toLowerCase().replace(/\s+/g, ''))) ||
         ((books_authors[i].author.name).toLowerCase().replace(/\s+/g, '').includes((searchBookInput).toLowerCase().replace(/\s+/g, '')))
         ) {
         //cancella l'array ad ogni click cosi da non duplicarlo
-        this.arrayBooks.pop();
+        while (this.arrayBooks.length) {
+          this.arrayBooks.pop();
+        }
         this.spinner = true;
         //finge di ricaricare le card
         this.cardsShow = false;
@@ -74,6 +78,9 @@ export class HomeComponent implements OnInit {
         }, 500);
 
       }
+
+      console.log(this.counterJson);
+
 
       //[ciclo] se non entra nel primo if azzera l'input e cambia il placeholder(label). Inoltre fa sparire le ricerche in pagina
       if (this.counterJson) {
