@@ -32,12 +32,20 @@ export class HomeComponent implements OnInit {
   counterJson : boolean;
   cardsShow = false;
   spinner = false;
-  arrayBooks: string[] = [];
+  arrayBooks: any[] = [];
   x: number;
 
   searchBookFunction() {
 
     let searchBookInput = this.searchBookInput;
+    let x = this.x;
+    x = 0;
+    //cancella l'array ad ogni click cosi da non duplicarlo
+    if (this.arrayBooks.length >= 0) {
+      while (this.arrayBooks.length) {
+        this.arrayBooks.pop();
+      }
+    }
 
     //se non dovesse entrare il primo if questo counter true ti permetterà di entrare nell'if successivo
     this.counterJson = true;
@@ -57,10 +65,6 @@ export class HomeComponent implements OnInit {
         ((books_authors[i].name).toLowerCase().replace(/\s+/g, '').includes((searchBookInput).toLowerCase().replace(/\s+/g, ''))) ||
         ((books_authors[i].author.name).toLowerCase().replace(/\s+/g, '').includes((searchBookInput).toLowerCase().replace(/\s+/g, '')))
         ) {
-        //cancella l'array ad ogni click cosi da non duplicarlo
-        while (this.arrayBooks.length) {
-          this.arrayBooks.pop();
-        }
         this.spinner = true;
         //finge di ricaricare le card
         this.cardsShow = false;
@@ -69,6 +73,10 @@ export class HomeComponent implements OnInit {
 
         //pusha la ricerca in un array provvisorio istanziato prima
         this.arrayBooks.push(books_authors[i]);
+        // this.arrayBooks[x] += this.arrayBooks.push(books_authors[i]);
+        console.log(books_authors[i]);
+        x++;
+
         console.log(this.arrayBooks);
 
         //solo per grafica: ritarda di mezzo secondo la visualizzazione
@@ -78,18 +86,13 @@ export class HomeComponent implements OnInit {
         }, 500);
 
       }
-
-      console.log(this.counterJson);
-
-
-      //[ciclo] se non entra nel primo if azzera l'input e cambia il placeholder(label). Inoltre fa sparire le ricerche in pagina
-      if (this.counterJson) {
-        //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
-        (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
-        (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Book or Author not found...';
-        this.cardsShow = false;
-      }
-
+    }
+    //[ciclo] se non entra nel primo if azzera l'input e cambia il placeholder(label). Inoltre fa sparire le ricerche in pagina
+    if (this.counterJson) {
+      //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
+      (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
+      (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Book or Author not found...';
+      this.cardsShow = false;
     }
 
     //VALIDAZIONI FORM BOOTSTRAP
