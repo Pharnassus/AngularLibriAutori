@@ -28,12 +28,33 @@ export class HomeComponent implements OnInit {
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
   error = 0;
-  errorState = false;
+  cardsShow = false;
   spinner = false;
+  arrayBooks = [];
 
   searchBookFunction(){
 
-    this.spinner = true;
+    const searchBook = this.searchBook;
+
+
+    for (let i = 0; i < books_authors.length; i++) {
+
+      if (searchBook == books_authors[i].author.name) {
+        this.arrayBooks.pop();
+        this.spinner = true;
+        this.cardsShow = false;
+
+        this.arrayBooks.push(books_authors[i]);
+        console.log(this.arrayBooks);
+
+        setTimeout(() => {
+          this.spinner = false;
+          this.cardsShow = true;
+        }, 500);
+
+      }
+
+    }
 
   }
 

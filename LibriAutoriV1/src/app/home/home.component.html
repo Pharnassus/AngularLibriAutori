@@ -3,7 +3,7 @@
   <div class="m_inputSearchContainer form-floating mb-3">
     <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre" [(ngModel)]="searchBook"
       [ngModelOptions]="{standalone: true}" required>
-    <label for="m_searchBook">Search by genre</label>
+    <label for="m_searchBook">Search by name</label>
   </div>
 
   <div id="m_searchSpinnerContainer">
@@ -19,8 +19,8 @@
 </form>
 
 
-<div>
-  <ul *ngFor="let item of books_authorsList">
+<div *ngIf="cardsShow">
+  <ul *ngFor="let item of arrayBooks">
     <li>Title: {{item.name}}</li>
     <li>Author: {{item.author.name}}</li>
     <li>Gender: {{item.author.gender}}</li>
