@@ -1,3 +1,8 @@
 nav{
   margin-bottom: 20px;
+  display: block;
+
+  .navbar-nav{
+    justify-content: space-between;
+  }
 }
