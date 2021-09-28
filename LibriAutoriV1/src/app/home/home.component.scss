@@ -1,0 +1,50 @@
+.m_searchForm {
+  // background-color: lightgreen;
+  display: flex;
+  align-items: baseline;
+
+  .m_inputSearchContainer{
+    width: 60%;
+    padding-right: 0;
+
+    input {
+      text-align: center;
+    }
+  }
+
+  // sezione pulsante login
+  #m_searchSpinnerContainer {
+    width: 40%;
+    padding-left: 0;
+
+    button{
+      vertical-align: inherit;
+      padding: .97rem .75rem;
+      background-color: white;
+      color: black;
+      border: 1px solid gray;
+    }
+    button:focus{
+      box-shadow: none;
+    }
+
+    .m_spinnerLogin {
+      margin-left: 10px;
+      width: 15px;
+      height: 15px;
+    }
+
+    span {
+      margin-right: 5px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #0d92fe;
+      cursor: pointer;
+    }
+  }
+}
+
+

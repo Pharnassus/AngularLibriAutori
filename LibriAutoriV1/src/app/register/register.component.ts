@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
   pwd: string;
   pwdRepeat: string;
 
-  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
+  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
   error = 0;
   errorState = false;
   errorStateEmpty = false;

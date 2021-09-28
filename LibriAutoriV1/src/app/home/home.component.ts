@@ -23,4 +23,18 @@ export class HomeComponent implements OnInit {
     publish_date: Date,
   }[] = books_authors;
 
+  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER RECUPERARE I DATI DALL'INPUT
+  searchBook: string;
+
+  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
+  error = 0;
+  errorState = false;
+  spinner = false;
+
+  searchBookFunction(){
+
+    this.spinner = true;
+
+  }
+
 }

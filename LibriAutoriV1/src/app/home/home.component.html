@@ -1,3 +1,24 @@
+<form class="m_searchForm row g-3 needs-validation" novalidate>
+
+  <div class="m_inputSearchContainer form-floating mb-3">
+    <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre" [(ngModel)]="searchBook"
+      [ngModelOptions]="{standalone: true}" required>
+    <label for="m_searchBook">Search by genre</label>
+  </div>
+
+  <div id="m_searchSpinnerContainer">
+    <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
+        <i class="fas fa-search"></i>
+        Search
+        <div class="m_spinnerLogin spinner-border text-dark" role="status" *ngIf="spinner">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </button>
+  </div>
+
+</form>
+
+
 <div>
   <ul *ngFor="let item of books_authorsList">
     <li>Title: {{item.name}}</li>
