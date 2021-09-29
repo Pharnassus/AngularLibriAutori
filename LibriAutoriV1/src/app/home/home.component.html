@@ -10,9 +10,12 @@
     <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
         <i class="fas fa-search"></i>
         Search
-        <div class="m_spinnerLogin spinner-border text-dark" role="status" *ngIf="spinner">
+        <!-- <div class="m_spinnerLogin spinner-border text-dark" role="status" *ngIf="spinner">
           <span class="visually-hidden">Loading...</span>
-        </div>
+        </div> -->
+        <ng-container *ngIf="spinner">
+          <minispinner></minispinner>
+        </ng-container>
       </button>
   </div>
 
