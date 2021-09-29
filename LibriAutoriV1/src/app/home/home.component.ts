@@ -32,55 +32,71 @@ export class HomeComponent implements OnInit {
   counterJson : boolean;
   cardsShow = false;
   spinner = false;
+  //chiedi
   arrayBooks: string[] = [];
 
-  searchBookFunction() {
+  //[funzione al click dentro l'input]
+  //cambia la label e imposta la ricerca a null cosi da poter entrare nel 3° if piu in basso
+  inputFunctionFocus() {
+    (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Search by Author or Book';
+    this.searchBookInput = null;
+  }
 
+  searchBookFunction() {
+    //rinomino le variabili per una migliore lettura
     let searchBookInput = this.searchBookInput;
-    // cancella l'array ad ogni click cosi da non duplicarlo
+
+
+    //[ciclo] cancella l'array ad ogni click cosi da non duplicarlo
     if (this.arrayBooks.length >= 0) {
       while (this.arrayBooks.length) {
         this.arrayBooks.pop();
       }
     }
 
-    //se non dovesse entrare il primo if questo counter true ti permetterà di entrare nell'if successivo
+    //se non dovesse entrare il primo if nel for questo counter true ti permetterà di entrare nell'if successivo
     this.counterJson = true;
-    (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Search result for';
-
 
     //[ciclo] cicla il json
     for (let i = 0; i < books_authors.length; i++) {
 
+      //[ciclo] evita l'errore che genera se parte la ricerca con l'input vuoto interrompendo il ciclo in partenza
+      if (searchBookInput == null) {
+        break
+      }
 
+      //[ciclo] controlla e valida l'input (è il ciclo piu complesso)
       if (
         //prende l'input, lo trasforma in minuscolo, toglie gli spazi e confronta con un match nel json a cui vengono applicate le stesse regole
-        (searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == ((books_authors[i].name).toLowerCase().replace(/[^a-zA-Z0-9]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == ((books_authors[i].author.name).toLowerCase().replace(/[^a-zA-Z0-9]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == ((books_authors[i].genre).toLowerCase().replace(/[^a-zA-Z0-9]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, '') == ((books_authors[i].publish_date).toLowerCase().replace(/[^a-zA-Z0-9]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].genre).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '')) ||
         //la funzione includes è booleana: se la propr name nel json (in minuscolo e senza spazi) include l'input con le stesse regole allora è true
-        ((books_authors[i].name).toLowerCase().replace(/[^a-zA-Z0-9]/g, '').includes((searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, ''))) ||
-        ((books_authors[i].author.name).toLowerCase().replace(/[^a-zA-Z0-9]/g, '').includes((searchBookInput).toLowerCase().replace(/[^a-zA-Z0-9]/g, '')))
+        ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
+        ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
+        ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, '')))
         ) {
+        //fa partile lo spinner animandolo
         this.spinner = true;
-        //finge di ricaricare le card
+        //fa sparire l'html delle card prima di farle ricomparire dopo
         this.cardsShow = false;
-        //switcha in false se la ricerca va a buon fine e non genera così errori nell'if seguente
+        //switcha in false se la ricerca va a buon fine e non entra così nell'if seguente
         this.counterJson = false;
 
-        //pusha la ricerca in un array provvisorio istanziato prima
+        //PUSH IN UN ARRAY SECONDARIO CREATO PER LA VISUALIZZAZIONE DOPO IL FILTRO
         this.arrayBooks.push(books_authors[i]);
         console.log(this.arrayBooks);
 
-        //solo per grafica: ritarda di mezzo secondo la visualizzazione
+        //solo per grafica: ritarda di Xsecondi la visualizzazione
         setTimeout(() => {
           this.spinner = false;
           this.cardsShow = true;
-        }, 500);
+        }, 700);
 
       }
     }
+
     //[ciclo] se non entra nel primo if azzera l'input e cambia il placeholder(label). Inoltre fa sparire le ricerche in pagina
     if (this.counterJson) {
       //per accedere all'id con il typescript bisogna aggiungere (<HTMLInputElement>)
@@ -88,6 +104,11 @@ export class HomeComponent implements OnInit {
       (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Book or Author not found...';
       this.cardsShow = false;
     }
+
+    if (this.searchBookInput == null) {
+      (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'A research parameter is needed';
+    }
+
 
     //VALIDAZIONI FORM BOOTSTRAP
     // Fetch all the forms we want to apply custom Bootstrap validation styles to

@@ -2,7 +2,7 @@
 
   <div class="m_inputSearchContainer form-floating mb-3">
     <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre" [(ngModel)]="searchBookInput"
-      [ngModelOptions]="{standalone: true}" required>
+      [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
     <label id="m_labelError" for="m_searchBook">Search by Author or Book</label>
   </div>
 
