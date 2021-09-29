@@ -38,28 +38,38 @@ form {
     width: 47%;
   }
 
-  // // sezione pulsante login
-  // #m_loginSpinnerContainer {
-  //   display: flex;
-  //   margin-top: 20px;
-  //   align-items: flex-end;
-  //   justify-content: space-between;
+  // sezione pulsante login
+  #m_loginSpinnerContainer {
+    display: flex;
+    margin-top: 20px;
+    align-items: flex-end;
+    justify-content: space-between;
 
-  //   .m_spinnerLogin {
-  //     margin-left: 10px;
-  //     width: 15px;
-  //     height: 15px;
-  //   }
+    .m_spinnerLogin {
+      margin-left: 10px;
+      width: 15px;
+      height: 15px;
+    }
 
-  //   span {
-  //     margin-right: 5px;
-  //   }
+    span {
+      margin-right: 5px;
+    }
 
-  //   a {
-  //     text-decoration: none;
-  //     font-size: 18px;
-  //     color: #0d92fe;
-  //     cursor: pointer;
-  //   }
-  // }
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #0d92fe;
+      cursor: pointer;
+    }
+  }
+}
+
+.offset-sm-2 {
+  margin-left: 0 !important;
+}
+
+@media (min-width: 111px) {
+  .offset-sm-2 {
+    margin-left: 0 !important;
+  }
 }
