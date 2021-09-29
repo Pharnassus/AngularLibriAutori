@@ -42,22 +42,23 @@ export class RegisterComponent implements OnInit {
   errorState = false;
   errorStateEmpty = false;
   errorStatePwd = false;
+  errorStatePwdSpaces = false;
   errorStateEmail = false;
   welcome = false;
   spinner = false;
 
   register() {
-
-    const firstName = this.firstName;
-    const lastName = this.lastName;
-    const usernameInput = this.username;
-    const emailInput = this.email;
-    const pwdInput = this.pwd;
-    const pwdRepeat = this.pwdRepeat;
-
+    //rinomino le variabili per una migliore lettura
+    let firstName = this.firstName;
+    let lastName = this.lastName;
+    let usernameInput = this.username;
+    let emailInput = this.email;
+    let pwdInput = this.pwd;
+    let pwdRepeat = this.pwdRepeat;
 
     //attiva il login spinner
     this.spinner = true;
+    //contatore degli errori: se diverso da 0 non fa il sumbit
     this.error = 0;
 
     // CICLA IL JSON
@@ -66,43 +67,80 @@ export class RegisterComponent implements OnInit {
       // [test]CICLA TUTTI GLI UTENTI; STESSA COSA POTRAI FARLA CON IL RESTO DELLE CHIAVI DEL JSON
       // console.log(users[i].user);
 
-      // [ciclo] controlla se gli input iniziali so vuoti o meno
-      if ((<HTMLInputElement>document.getElementById('floatingFN')).value == ''
-        || (<HTMLInputElement>document.getElementById('floatingLN')).value == ''
-        || (<HTMLInputElement>document.getElementById('floatingUN')).value == ''
-        || (<HTMLInputElement>document.getElementById('floatingEmail')).value == ''
-        || (<HTMLInputElement>document.getElementById('floatingPassword')).value == ''
-        || (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '') {
+      // [ciclo] controlla se gli input iniziali so vuoti o meno !è un ciclo vincolante per i successivi!
+      if (
+        (<HTMLInputElement>document.getElementById('floatingFN')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingLN')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingUN')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingEmail')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == ''
+      ) {
         this.spinner = false;
         this.errorStatePwd = false;
         this.errorStateEmpty = true;
         this.error == 1;
       }
 
-      // else if (emailInput.includes("@") == false
-      //   || emailInput.includes(".it") == false
-      //   || emailInput.includes(".com") == false
-      //   || emailInput.includes(".tech") == false) {
-      //   this.spinner = false;
-      //   this.errorStateEmpty = false;
-      //   this.errorStateEmail = true;
-      //   this.error == 1;
-      // }
 
-      else if (pwdInput != pwdRepeat) {
+      //[ciclo] controllo email
+      if (
+        (emailInput).includes("@") == false ||
+        (emailInput).includes(".it") == false
+        // (emailInput).toLowerCase().includes(".com") == false
+        // emailInput.includes(".tech") == false
+      ) {
+        this.spinner = false;
+        this.errorStateEmpty = false;
+        this.errorStateEmail = true;
+        this.error == 1;
+
+        (<HTMLInputElement>document.getElementById('floatingEmail')).value == '';
+
+        break
+      }
+
+      //[ciclo] controllo password
+      if (pwdInput != pwdRepeat) {
         this.spinner = false;
         this.errorStateEmpty = false;
         this.errorStatePwd = true;
         this.error == 1;
+
+        break
+      }
+      else if (
+        (pwdInput).includes(" ") ||
+        (pwdRepeat).includes(" ")
+      ) {
+        this.spinner = false;
+        this.errorStateEmpty = false;
+        this.errorStatePwdSpaces = true;
+        this.error == 1;
+
+        break
+      }
+
+      if (this.error == 0) {
+        // elimina i caratteri speciali dai vari input
+        firstName = (firstName).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
+        lastName = (lastName).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
+        usernameInput = (usernameInput).replace(/[!&\/\\#,+()$~%'":*?<>{}]/g, '');
+        emailInput = (emailInput).toLowerCase().replace(/[!&\/\\#,+()$~%'":*?<>{}]/g, '');
+        // per la password invece ci sono meno restrizioni
+        pwdInput = (pwdInput).replace(/[\/\\,+()~'":*<>{}]/g, '');
+        pwdRepeat = (pwdRepeat).replace(/[\/\\,+()~'":*<>{}]/g, '');
       }
 
       // una volta trovato l'oggetto con i valori test dovrà "memorizzarli"
-      else if (users[i].firstName == "test"
-        && users[i].lastName == "test"
-        && users[i].user == "test"
-        && users[i].email == "test"
-        && users[i].pwd == "test"
-        && this.error == 0) {
+      if (
+        users[i].firstName == "test" &&
+        users[i].lastName == "test" &&
+        users[i].user == "test" &&
+        users[i].email == "test" &&
+        users[i].pwd == "test" &&
+        this.error == 0
+      ) {
 
         //per far sparire il banner di errore in caso di successivo login corretto
         // this.errorState = false;
@@ -135,6 +173,7 @@ export class RegisterComponent implements OnInit {
           this.router.navigate(['/login']);
         }, 4500);
 
+        break
       }
     }
 
@@ -152,7 +191,7 @@ export class RegisterComponent implements OnInit {
           }
 
           form.classList.add('was-validated')
-        }, false)
+        }, true)
       })
   }
 

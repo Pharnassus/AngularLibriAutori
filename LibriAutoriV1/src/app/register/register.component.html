@@ -5,6 +5,9 @@
 <div class="alert alert-danger" role="alert" *ngIf="errorStatePwd">
   <span>Le password non coincidono</span>
 </div>
+<div class="alert alert-danger" role="alert" *ngIf="errorStatePwdSpaces">
+  <span>La password contiene spazi</span>
+</div>
 <div class="alert alert-danger" role="alert" *ngIf="errorStateEmail">
   <span>Email error</span>
 </div>
@@ -48,9 +51,9 @@
     <label for="floatingPassword">Password</label>
   </div>
   <div class="form-floating mb-3">
-    <input type="password" class="form-control" id="floatingPasswordRepeat" placeholder="PasswordRepeat" [(ngModel)]="pwdRepeat"
-      [ngModelOptions]="{standalone: true}" required>
-    <label for="floatingPasswordRepeat">Password repeat</label>
+    <input type="password" class="form-control" id="floatingPasswordRepeat" placeholder="PasswordRepeat"
+      [(ngModel)]="pwdRepeat" [ngModelOptions]="{standalone: true}" required>
+    <label for="floatingPasswordRepeat">Repeat password</label>
   </div>
 
 
