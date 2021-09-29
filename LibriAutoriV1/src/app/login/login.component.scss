@@ -1,5 +1,8 @@
+@import "../../styles.scss";
+
 #m_loginSuccess {
-  background-color: lightgray;
+  background-color: $bannerSuccessColor;
+  color: $bannerSuccessTextColor;
   position: absolute;
   top: 13%;
   left: 21%;

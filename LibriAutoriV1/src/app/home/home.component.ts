@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   //[funzione al click dentro l'input]
   //cambia la label e imposta la ricerca a null cosi da poter entrare nel 3° if piu in basso
   inputFunctionFocus() {
-    (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Search by Author or Book';
+    (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Search by Author, Book or Genre';
     this.searchBookInput = null;
   }
 

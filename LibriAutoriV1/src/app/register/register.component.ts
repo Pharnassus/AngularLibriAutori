@@ -104,6 +104,7 @@ export class RegisterComponent implements OnInit {
       if (pwdInput != pwdRepeat) {
         this.spinner = false;
         this.errorStateEmpty = false;
+        this.errorStateEmail = false;
         this.errorStatePwd = true;
         this.error == 1;
 
@@ -115,6 +116,8 @@ export class RegisterComponent implements OnInit {
       ) {
         this.spinner = false;
         this.errorStateEmpty = false;
+        this.errorStateEmail = false;
+        this.errorStatePwd = false;
         this.errorStatePwdSpaces = true;
         this.error == 1;
 
@@ -145,8 +148,9 @@ export class RegisterComponent implements OnInit {
         //per far sparire il banner di errore in caso di successivo login corretto
         // this.errorState = false;
         this.errorStateEmpty = false;
-        this.errorStatePwd = false;
         this.errorStateEmail = false;
+        this.errorStatePwd = false;
+        this.errorStatePwdSpaces = false;
 
         // "memorizza" nel json
         users[i].firstName = firstName;
