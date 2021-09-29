@@ -3,7 +3,7 @@
   <div class="m_inputSearchContainer form-floating mb-3">
     <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre"
       [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
-    <label id="m_labelError" for="m_searchBook">Search by Author, Book or Genre</label>
+    <label id="m_labelError" for="m_searchBook">Start your search</label>
   </div>
 
   <div id="m_searchSpinnerContainer">
@@ -21,13 +21,23 @@
 
 
 <ng-container *ngIf="cardsShow">
-  <ng-container *ngFor="let item of arrayBooks">
-    <ul>
-      <li>Title: {{item.name}}</li>
-      <li>Author: {{item.author.name}}</li>
-      <li>Gender: {{item.author.gender}}</li>
-      <li>Genre: {{item.genre}}</li>
-      <li>Publish date: {{item.publish_date}}</li>
-    </ul>
-  </ng-container>
+
+  <div id="m_cardContainer">
+    <ng-container *ngFor="let item of arrayBooks">
+
+      <div class="m_cardStyle card" style="width: 18rem;">
+        <div class="card-header">
+          Title: <strong>{{item.publish_date}}</strong>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Author: <strong>{{item.author.name}}</strong></li>
+          <li class="list-group-item">Gender: <strong>{{item.author.gender}}</strong></li>
+          <li class="list-group-item">Genre: <strong>{{item.genre}}</strong></li>
+          <li class="list-group-item">Publish date: <strong>{{item.publish_date}}</strong></li>
+        </ul>
+      </div>
+
+    </ng-container>
+  </div>
+
 </ng-container>
