@@ -9,7 +9,6 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MinispinnerComponent } from './minispinner/minispinner.component';
-import { ValidationFormComponent } from './validation-form/validation-form.component';
 
 
 @NgModule({
@@ -19,7 +18,6 @@ import { ValidationFormComponent } from './validation-form/validation-form.compo
     RegisterComponent,
     HomeComponent,
     MinispinnerComponent,
-    ValidationFormComponent,
   ],
   imports: [
     BrowserModule,

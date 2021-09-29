@@ -1,33 +1,35 @@
 <form class="m_searchForm row g-3 needs-validation" novalidate>
 
   <div class="m_inputSearchContainer form-floating mb-3">
-    <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre" [(ngModel)]="searchBookInput"
-      [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
+    <input type="text" class="form-control" id="m_searchBook" placeholder="search by genre"
+      [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
     <label id="m_labelError" for="m_searchBook">Search by Author or Book</label>
   </div>
 
   <div id="m_searchSpinnerContainer">
     <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
-        <i class="fas fa-search"></i>
-        Search
-        <!-- <div class="m_spinnerLogin spinner-border text-dark" role="status" *ngIf="spinner">
+      <i class="fas fa-search"></i>
+      Search
+      <!-- <div class="m_spinnerLogin spinner-border text-dark" role="status" *ngIf="spinner">
           <span class="visually-hidden">Loading...</span>
         </div> -->
-        <ng-container *ngIf="spinner">
-          <minispinner></minispinner>
-        </ng-container>
-      </button>
+      <ng-container *ngIf="spinner">
+        <minispinner></minispinner>
+      </ng-container>
+    </button>
   </div>
 
 </form>
 
 
-<div *ngIf="cardsShow">
-  <ul *ngFor="let item of arrayBooks">
-    <li>Title: {{item.name}}</li>
-    <li>Author: {{item.author.name}}</li>
-    <li>Gender: {{item.author.gender}}</li>
-    <li>Genre: {{item.genre}}</li>
-    <li>Publish date: {{item.publish_date}}</li>
-  </ul>
-</div>
+<ng-container *ngIf="cardsShow">
+  <ng-container *ngFor="let item of arrayBooks">
+    <ul>
+      <li>Title: {{item.name}}</li>
+      <li>Author: {{item.author.name}}</li>
+      <li>Gender: {{item.author.gender}}</li>
+      <li>Genre: {{item.genre}}</li>
+      <li>Publish date: {{item.publish_date}}</li>
+    </ul>
+  </ng-container>
+</ng-container>
