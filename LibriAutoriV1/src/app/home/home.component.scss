@@ -3,6 +3,7 @@
 .m_searchForm {
   // background-color: lightgreen;
   display: flex;
+  justify-content: center;
 
   .m_inputSearchContainer {
     width: 70%;
@@ -19,7 +20,7 @@
 
   // sezione pulsante login
   #m_searchSpinnerContainer {
-    width: 30%;
+    width: 10%;
     padding-left: 0;
 
     button {
@@ -47,14 +48,70 @@
   }
 }
 
-#m_cardContainer{
-  // background: green;
-  width: 83%;
+#m_cardContainer {
+  // background: $testColor1;
+  height: 74vh;
+  overflow-y: scroll;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  .m_cardStyle{
-    margin-bottom: 20px;
+  .m_cardStyle {
+    width: 16rem;
+    margin-bottom: 30px;
+  }
+}
+
+#m_cardContainer::-webkit-scrollbar {
+  display: none;
+}
+
+
+//_______________________________________________________________________________________________________________________________________
+//QUERIES
+
+@media screen and (max-width: 1199px) {
+
+  .m_searchForm {
+
+    .m_inputSearchContainer {
+      width: 65%;
+    }
+
+    // sezione pulsante login
+    #m_searchSpinnerContainer {
+      width: 15%;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+
+  .m_searchForm {
+
+    .m_inputSearchContainer {
+      width: 55%;
+    }
+
+    // sezione pulsante login
+    #m_searchSpinnerContainer {
+      width: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+
+  .m_searchForm {
+
+    .m_inputSearchContainer {
+      width: 50%;
+    }
+
+    // sezione pulsante login
+    #m_searchSpinnerContainer {
+      width: 30%;
+    }
   }
 }

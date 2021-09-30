@@ -8,12 +8,12 @@
 
   <div id="m_searchSpinnerContainer">
     <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
-      <i class="fas fa-search"></i>
-      Search
+      <i class="fas fa-search" *ngIf="spinner == false"></i>
       <!-- sostituzione spinner con il component -->
       <ng-container *ngIf="spinner">
         <minispinner></minispinner>
       </ng-container>
+      Search
     </button>
   </div>
 
@@ -22,10 +22,10 @@
 
 <ng-container *ngIf="cardsShow">
 
-  <div id="m_cardContainer">
+  <div id="m_cardContainer" class="col-lg-12 col-sm-1">
     <ng-container *ngFor="let item of arrayBooks">
 
-      <div class="m_cardStyle card" style="width: 18rem;">
+      <div class="m_cardStyle card">
         <div class="card-header">
           Title: <strong>{{item.publish_date}}</strong>
         </div>
