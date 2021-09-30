@@ -48,6 +48,7 @@
   }
 }
 
+//sezione cards libri
 #m_cardContainer {
   // background: $testColor1;
   height: 74vh;
@@ -55,11 +56,12 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-around;
 
   .m_cardStyle {
+    // background: $testColor2;
     width: 16rem;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
+    margin-right: 23px;
   }
 }
 
@@ -99,6 +101,24 @@
       width: 25%;
     }
   }
+
+  #m_cardContainer {
+
+    .m_cardStyle {
+      margin-bottom: 23px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 535px) {
+  #m_cardContainer {
+
+    .m_cardStyle {
+      margin-bottom: 23px;
+      margin-right: 23px;
+    }
+  }
 }
 
 @media screen and (max-width: 415px) {
@@ -114,4 +134,13 @@
       width: 30%;
     }
   }
+
+  #m_cardContainer {
+
+    .m_cardStyle {
+      margin-bottom: 23px;
+      margin-right: 0;
+    }
+  }
+
 }
