@@ -108,10 +108,12 @@ export class RegisterComponent implements OnInit {
         this.errorStateEmail = false;
         this.errorStatePwd = true;
         this.error == 1;
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '';
+        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '';
 
         break
       }
-      //[ciclo] se la passweord contiene spazi stampa il messaggio di errore
+      //[ciclo] se la password contiene spazi stampa il messaggio di errore
       else if (
         (pwdInput).includes(" ") ||
         (pwdRepeat).includes(" ")
@@ -122,6 +124,8 @@ export class RegisterComponent implements OnInit {
         this.errorStatePwd = false;
         this.errorStatePwdSpaces = true;
         this.error == 1;
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '';
+        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '';
 
         break
       }
@@ -137,6 +141,11 @@ export class RegisterComponent implements OnInit {
         this.errorStatePwdSpaces = false;
         this.errorStatePwdLength = true;
         this.error == 1;
+        pwdInput = "";
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '';
+        (<HTMLInputElement>document.getElementById('m_labelPassword')).innerHTML == 'Password';
+        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '';
+        (<HTMLInputElement>document.getElementById('m_labelPasswordRepeat')).innerHTML == 'Repeat Password';
 
         break
       }

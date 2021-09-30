@@ -3,12 +3,10 @@
 #m_loginSuccess {
   background-color: $bannerSuccessColor;
   color: $bannerSuccessTextColor;
-  position: absolute;
-  top: 13%;
-  left: 21%;
+  // position: absolute;
   z-index: 2;
   height: 400px;
-  width: 58%;
+  // width: 88%;
   border-radius: 7px;
   overflow: hidden;
   -webkit-box-shadow: 3px 4px 17px 4px rgba(87, 83, 83, 0.75);

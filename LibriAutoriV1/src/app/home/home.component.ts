@@ -58,54 +58,54 @@ export class HomeComponent implements OnInit {
     }
 
 
-      //[ciclo] cicla il json
-      for (let i = 0; i < books_authors.length; i++) {
+    //[ciclo] cicla il json
+    for (let i = 0; i < books_authors.length; i++) {
 
-        //[ciclo] evita l'errore in console che genera se parte la ricerca con l'input vuoto interrompendo il ciclo in partenza
-        //[ciclo] prende in considerazione l'input se è minore di 3 blocca tutto
-        if (
-          searchBookInput == null ||
-          (searchBookInput).length <= 3
-        ) {
-          //azzerato il valore dell'input e cambiata la label, porta il counterJson a false cosi che dopo il break non entri nell'if dopo il ciclo for
-          (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
-          (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Minimum 3 Characters!';
-          this.counterJson = false;
-          break
-        }
-
-        //[ciclo] controlla e valida l'input (è il ciclo piu complesso)
-        if (
-          //prende l'input, lo trasforma in minuscolo, toglie gli spazi e confronta con un match nel json a cui vengono applicate le stesse regole
-          (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '')) ||
-          (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '')) ||
-          (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].author.gender).toLowerCase().replace(/[\s+]/g, '')) ||
-          (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].genre).toLowerCase().replace(/[\s+]/g, '')) ||
-          (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '')) ||
-          //la funzione includes è booleana: se la propr name nel json (in minuscolo e senza spazi) include l'input con le stesse regole allora è true
-          ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
-          ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
-          ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, '')))
-        ) {
-          //fa partile lo spinner animandolo
-          this.spinner = true;
-          //fa sparire l'html delle card prima di farle ricomparire dopo
-          this.cardsShow = false;
-          //switcha in false se la ricerca va a buon fine e non entra così nell'if seguente
-          this.counterJson = false;
-
-          //PUSH IN UN ARRAY SECONDARIO CREATO PER LA VISUALIZZAZIONE DOPO IL FILTRO
-          this.arrayBooks.push(books_authors[i]);
-          console.log(this.arrayBooks);
-
-          //solo per grafica: ritarda di Xsecondi la visualizzazione
-          setTimeout(() => {
-            this.spinner = false;
-            this.cardsShow = true;
-          }, 1000);
-
-        }
+      //[ciclo] evita l'errore in console che genera se parte la ricerca con l'input vuoto interrompendo il ciclo in partenza
+      //[ciclo] prende in considerazione l'input se è minore di 3 blocca tutto
+      if (
+        searchBookInput == null ||
+        (searchBookInput).length <= 3
+      ) {
+        //azzerato il valore dell'input e cambiata la label, porta il counterJson a false cosi che dopo il break non entri nell'if dopo il ciclo for
+        (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
+        (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Minimum 3 Characters!';
+        this.counterJson = false;
+        break
       }
+
+      //[ciclo] controlla e valida l'input (è il ciclo piu complesso)
+      if (
+        //prende l'input, lo trasforma in minuscolo, toglie gli spazi e confronta con un match nel json a cui vengono applicate le stesse regole
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].author.gender).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].genre).toLowerCase().replace(/[\s+]/g, '')) ||
+        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '')) ||
+        //la funzione includes è booleana: se la propr name nel json (in minuscolo e senza spazi) include l'input con le stesse regole allora è true
+        ((books_authors[i].name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
+        ((books_authors[i].author.name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
+        ((books_authors[i].publish_date).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, '')))
+      ) {
+        //fa partile lo spinner animandolo
+        this.spinner = true;
+        //fa sparire l'html delle card prima di farle ricomparire dopo
+        this.cardsShow = false;
+        //switcha in false se la ricerca va a buon fine e non entra così nell'if seguente
+        this.counterJson = false;
+
+        //PUSH IN UN ARRAY SECONDARIO CREATO PER LA VISUALIZZAZIONE DOPO IL FILTRO
+        this.arrayBooks.push(books_authors[i]);
+        console.log(this.arrayBooks);
+
+        //solo per grafica: ritarda di Xsecondi la visualizzazione
+        setTimeout(() => {
+          this.spinner = false;
+          this.cardsShow = true;
+        }, 1000);
+
+      }
+    }
 
     //[ciclo] se non entra nel primo if azzera l'input e cambia il placeholder(label). Inoltre fa sparire le ricerche in pagina
     if (this.counterJson) {
@@ -139,5 +139,37 @@ export class HomeComponent implements OnInit {
       })
 
   }
+
+  // flipBook() {
+
+  //   let pages = document.getElementsByClassName('page');
+  //   let page1id = (<HTMLInputElement>document.getElementById('m_page1')).innerHTML;
+
+  //   // if (page1id == 'ciao' ) {
+  //   //   pages[1].classList.add('flipped');
+  //   //   console.log(pages[1]);
+
+  //   // }
+
+
+
+  //   for (var i = 0; i < pages.length; i++) {
+
+  //       if (page1id == 'ciao' ) {
+  //         pages[i].classList.remove('flipped');
+  //         pages[i].classList.remove('flipped');
+  //         break
+
+  //       }
+  //       else {
+  //         console.log(pages[i].classList);
+  //         pages[i].classList.add('flipped');
+  //         pages[i].classList.add('flipped');
+
+  //         break
+  //       }
+
+  //   }
+  // }
 
 }

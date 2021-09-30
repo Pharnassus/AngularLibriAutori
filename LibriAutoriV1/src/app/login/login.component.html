@@ -19,36 +19,40 @@
 </div>
 
 <!-- sezione form -->
-<form class="row g-3 needs-validation" novalidate>
+<ng-container *ngIf="welcome == false">
 
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username"
-      [ngModelOptions]="{standalone: true}" required>
-    <label for="floatingInput">Username</label>
-  </div>
-  <div class="form-floating">
-    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="pwd"
-      [ngModelOptions]="{standalone: true}" required>
-    <label for="floatingPassword">Password</label>
-  </div>
+  <form class="row g-3 needs-validation" novalidate>
 
-
-  <div id="m_loginSpinnerContainer">
-    <div>
-      <button type="submit" class="btn btn-primary" (click)="submit()">
-        Login
-        <div class="m_spinnerLogin spinner-border text-light" role="status" *ngIf="spinner">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </button>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="username" [(ngModel)]="username"
+        [ngModelOptions]="{standalone: true}" required>
+      <label for="floatingInput">Username</label>
     </div>
-    <div>
-      <span>or</span>
-      <a routerLink="/register">Register</a>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" [(ngModel)]="pwd"
+        [ngModelOptions]="{standalone: true}" required>
+      <label for="floatingPassword">Password</label>
     </div>
-  </div>
 
-</form>
+
+    <div id="m_loginSpinnerContainer">
+      <div>
+        <button type="submit" class="btn btn-primary" (click)="submit()">
+          Login
+          <div class="m_spinnerLogin spinner-border text-light" role="status" *ngIf="spinner">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </button>
+      </div>
+      <div>
+        <span>or</span>
+        <a routerLink="/register">Register</a>
+      </div>
+    </div>
+
+  </form>
+
+</ng-container>
 
 <!-- stampa tutto il json -->
 <!-- <div>
