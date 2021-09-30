@@ -141,11 +141,11 @@ export class RegisterComponent implements OnInit {
         this.errorStatePwdSpaces = false;
         this.errorStatePwdLength = true;
         this.error == 1;
-        pwdInput = "";
-        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '';
-        (<HTMLInputElement>document.getElementById('m_labelPassword')).innerHTML == 'Password';
-        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value == '';
-        (<HTMLInputElement>document.getElementById('m_labelPasswordRepeat')).innerHTML == 'Repeat Password';
+
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value = '';
+        (<HTMLInputElement>document.getElementById('m_labelPassword')).innerHTML = 'Password';
+        (<HTMLInputElement>document.getElementById('floatingPasswordRepeat')).value = '';
+        (<HTMLInputElement>document.getElementById('m_labelPasswordRepeat')).innerHTML = 'Repeat Password';
 
         break
       }
