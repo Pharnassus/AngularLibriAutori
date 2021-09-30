@@ -44,6 +44,7 @@ export class RegisterComponent implements OnInit {
   errorStatePwd = false;
   errorStatePwdSpaces = false;
   errorStateEmail = false;
+  errorStatePwdLength = false;
   welcome = false;
   spinner = false;
 
@@ -110,6 +111,7 @@ export class RegisterComponent implements OnInit {
 
         break
       }
+      //[ciclo] se la passweord contiene spazi stampa il messaggio di errore
       else if (
         (pwdInput).includes(" ") ||
         (pwdRepeat).includes(" ")
@@ -119,6 +121,21 @@ export class RegisterComponent implements OnInit {
         this.errorStateEmail = false;
         this.errorStatePwd = false;
         this.errorStatePwdSpaces = true;
+        this.error == 1;
+
+        break
+      }
+      //[ciclo] se la passweord contiene meno di 6 caratteri stampa l'error
+      else if (
+        (pwdInput).length <= 6 ||
+        (pwdRepeat).length <= 6
+      ) {
+        this.spinner = false;
+        this.errorStateEmpty = false;
+        this.errorStateEmail = false;
+        this.errorStatePwd = false;
+        this.errorStatePwdSpaces = false;
+        this.errorStatePwdLength = true;
         this.error == 1;
 
         break

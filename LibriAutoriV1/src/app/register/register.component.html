@@ -8,6 +8,9 @@
 <div class="alert alert-danger" role="alert" *ngIf="errorStatePwdSpaces">
   <span>La password contiene spazi</span>
 </div>
+<div class="alert alert-danger" role="alert" *ngIf="errorStatePwdLength">
+  <span>La password deve avere un minimo di 6 caratteri</span>
+</div>
 <div class="alert alert-danger" role="alert" *ngIf="errorStateEmail">
   <span>Email error</span>
 </div>
