@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import users from '../_services/users.json';
@@ -11,12 +12,19 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent extends HomeComponent implements OnInit, AfterViewInit {
 
   // AGGIUNTA "private router: Router" ALL'INTERNO DEL COSTRUTTORE PER IL REDIRECT DELLA PAGINA NELLA FUNZIONE SUBMIT [pt.2]
-  constructor(public router: Router) { }
+  constructor(public router: Router) {
+    super();
+  }
+
 
   ngOnInit() {
+
+  }
+
+  ngAfterViewInit(){
 
   }
 
@@ -35,10 +43,11 @@ export class LoginComponent implements OnInit {
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE IL BANNER LOGIN ERRATO E BENVENUTO
   error = 0;
+  spinner = false;
   errorState = false;
   errorStateEmpty = false;
   welcome = false;
-  spinner = false;
+  userSession: boolean;
 
   submit() {
 
@@ -92,6 +101,7 @@ export class LoginComponent implements OnInit {
         setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
+          this.testLog = false;
         }, 4500);
 
         break

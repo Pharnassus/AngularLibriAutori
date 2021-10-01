@@ -1,47 +1,49 @@
-<section id="m_formHome">
-  <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
+<ng-container *ngIf="testLog">
+  <section id="m_formHome">
+    <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
 
-    <div class="m_inputSearchContainer form-floating mb-3">
-      <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
-        [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
-      <label id="m_labelError" for="m_searchBook">Start your search</label>
-    </div>
-
-    <div id="m_searchSpinnerContainer">
-      <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
-        <i class="fas fa-search" *ngIf="spinner == false"></i>
-        <!-- sostituzione spinner con il component -->
-        <ng-container *ngIf="spinner">
-          <minispinner></minispinner>
-        </ng-container>
-        Search
-      </button>
-    </div>
-
-  </form>
-</section>
-
-
-<ng-container *ngIf="cardsShow">
-
-  <div id="m_cardContainer" class="col-lg-12 col-md-12 col-sm-11">
-    <ng-container *ngFor="let item of arrayBooks">
-
-      <div class="m_cardStyle card">
-        <div class="card-header">
-          Title: <strong>{{item.name}}</strong>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Author: <strong>{{item.author.name}}</strong></li>
-          <li class="list-group-item">Gender: <strong>{{item.author.gender}}</strong></li>
-          <li class="list-group-item">Genre: <strong>{{item.genre}}</strong></li>
-          <li class="list-group-item">Publish date: <strong>{{item.publish_date}}</strong></li>
-        </ul>
+      <div class="m_inputSearchContainer form-floating mb-3">
+        <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
+          [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
+        <label id="m_labelError" for="m_searchBook">Start your search</label>
       </div>
 
-    </ng-container>
-  </div>
+      <div id="m_searchSpinnerContainer">
+        <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
+          <i class="fas fa-search" *ngIf="spinner == false"></i>
+          <!-- sostituzione spinner con il component -->
+          <ng-container *ngIf="spinner">
+            <minispinner></minispinner>
+          </ng-container>
+          Search
+        </button>
+      </div>
 
+    </form>
+  </section>
+
+
+  <ng-container *ngIf="cardsShow">
+
+    <div id="m_cardContainer" class="col-lg-12 col-md-12 col-sm-11">
+      <ng-container *ngFor="let item of arrayBooks">
+
+        <div class="m_cardStyle card">
+          <div class="card-header">
+            Title: <strong>{{item.name}}</strong>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Author: <strong>{{item.author.name}}</strong></li>
+            <li class="list-group-item">Gender: <strong>{{item.author.gender}}</strong></li>
+            <li class="list-group-item">Genre: <strong>{{item.genre}}</strong></li>
+            <li class="list-group-item">Publish date: <strong>{{item.publish_date}}</strong></li>
+          </ul>
+        </div>
+
+      </ng-container>
+    </div>
+
+  </ng-container>
 </ng-container>
 
 <!-- test libro -->
