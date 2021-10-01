@@ -1,49 +1,55 @@
 @import "../../styles.scss";
 
-.m_searchForm {
-  // background-color: lightgreen;
+#m_formHome {
+  // background-color: $testColor1;
   display: flex;
   justify-content: center;
 
-  .m_inputSearchContainer {
-    width: 70%;
-    padding-right: 0;
+  .m_searchForm {
+    // background-color: lightgreen;
+    display: flex;
+    justify-content: center;
 
-    input {
-      text-align: center;
+    .m_inputSearchContainer {
+      width: 60%;
+      padding-right: 0;
+
+      input {
+        text-align: center;
+      }
+
+      input:focus {
+        box-shadow: none;
+      }
     }
 
-    input:focus {
-      box-shadow: none;
-    }
-  }
+    // sezione pulsante login
+    #m_searchSpinnerContainer {
+      width: 20%;
+      padding-left: 0;
 
-  // sezione pulsante login
-  #m_searchSpinnerContainer {
-    width: 10%;
-    padding-left: 0;
+      button {
+        vertical-align: inherit;
+        padding: 1.02rem .75rem;
+        background-color: white;
+        color: black;
+        border: 1px solid gray;
+      }
 
-    button {
-      vertical-align: inherit;
-      padding: .97rem .75rem;
-      background-color: white;
-      color: black;
-      border: 1px solid gray;
-    }
+      button:focus {
+        box-shadow: none;
+      }
 
-    button:focus {
-      box-shadow: none;
-    }
+      span {
+        margin-right: 5px;
+      }
 
-    span {
-      margin-right: 5px;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 18px;
-      color: #0d92fe;
-      cursor: pointer;
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #0d92fe;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -75,39 +81,35 @@
 //QUERIES
 
 @media screen and (max-width: 1199px) {
+  #m_formHome {
+    .m_searchForm {
 
-  .m_searchForm {
+      //input search
+      .m_inputSearchContainer {
+        width: 60%;
+      }
 
-    .m_inputSearchContainer {
-      width: 65%;
-    }
-
-    // sezione pulsante login
-    #m_searchSpinnerContainer {
-      width: 15%;
+      // sezione pulsante login
+      #m_searchSpinnerContainer {
+        width: 20%;
+      }
     }
   }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 992px) {
+  #m_formHome {
+    .m_searchForm {
 
-  .m_searchForm {
+      //input search
+      .m_inputSearchContainer {
+        width: 67%;
+      }
 
-    .m_inputSearchContainer {
-      width: 55%;
-    }
-
-    // sezione pulsante login
-    #m_searchSpinnerContainer {
-      width: 25%;
-    }
-  }
-
-  #m_cardContainer {
-
-    .m_cardStyle {
-      margin-bottom: 23px;
-      margin-right: 0;
+      // sezione pulsante login
+      #m_searchSpinnerContainer {
+        width: 33%;
+      }
     }
   }
 }
@@ -116,34 +118,19 @@
   #m_cardContainer {
 
     .m_cardStyle {
-      margin-bottom: 23px;
-      margin-right: 23px;
+
+      margin-right: 10px;
     }
   }
 }
 
 @media screen and (max-width: 415px) {
-
-  .m_searchForm {
-
-    .m_inputSearchContainer {
-      width: 50%;
-    }
-
-    // sezione pulsante login
-    #m_searchSpinnerContainer {
-      width: 30%;
-    }
-  }
-
-  #m_cardContainer {
+    #m_cardContainer {
 
     .m_cardStyle {
-      margin-bottom: 23px;
       margin-right: 0;
     }
   }
-
 }
 
 

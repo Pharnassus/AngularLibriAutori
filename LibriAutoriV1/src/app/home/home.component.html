@@ -1,23 +1,25 @@
-<form class="m_searchForm row g-3 needs-validation" novalidate>
+<section id="m_formHome">
+  <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
 
-  <div class="m_inputSearchContainer form-floating mb-3">
-    <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
-      [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
-    <label id="m_labelError" for="m_searchBook">Start your search</label>
-  </div>
+    <div class="m_inputSearchContainer form-floating mb-3">
+      <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
+        [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
+      <label id="m_labelError" for="m_searchBook">Start your search</label>
+    </div>
 
-  <div id="m_searchSpinnerContainer">
-    <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
-      <i class="fas fa-search" *ngIf="spinner == false"></i>
-      <!-- sostituzione spinner con il component -->
-      <ng-container *ngIf="spinner">
-        <minispinner></minispinner>
-      </ng-container>
-      Search
-    </button>
-  </div>
+    <div id="m_searchSpinnerContainer">
+      <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
+        <i class="fas fa-search" *ngIf="spinner == false"></i>
+        <!-- sostituzione spinner con il component -->
+        <ng-container *ngIf="spinner">
+          <minispinner></minispinner>
+        </ng-container>
+        Search
+      </button>
+    </div>
 
-</form>
+  </form>
+</section>
 
 
 <ng-container *ngIf="cardsShow">
