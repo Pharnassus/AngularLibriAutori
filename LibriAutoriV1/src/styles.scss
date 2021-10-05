@@ -4,6 +4,16 @@ $testColor2: rgb(21, 211, 31);
 $bannerSuccessColor: rgb(33, 37, 41);
 $bannerSuccessTextColor : white;
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  // padding: 0;
+}
+
+ul{
+  padding: 0;
+}
+
 ul,
 li {
   list-style: none;

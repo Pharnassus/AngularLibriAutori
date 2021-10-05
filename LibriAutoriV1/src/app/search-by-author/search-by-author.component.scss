@@ -63,9 +63,28 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  // border: 1px solid black;
+  border-radius: 7px 0 0 0 ;
 
+  // larghezza scrollbar
   &::-webkit-scrollbar {
-    display: none;
+    width: 5px;
+  }
+
+  // colore
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+  }
+
+  // cursore
+  &::-webkit-scrollbar-thumb {
+    background: black;
+
+    // cursore all'hover
+    &:hover {
+      background: gray;
+      cursor: pointer;
+    }
   }
 
   .m_cardStyle {
@@ -122,6 +141,21 @@
     .fas {
       margin-right: 15px;
     }
+
+    li {
+      margin-bottom: 5px;
+
+      .m_textCenter {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+    }
+
+    li.m_listBorderBottom {
+      border-bottom: 1px solid gray;
+      margin-bottom: 10px;
+    }
+
 
     .m_scrollDownAdvisor {
       background-color: $testColor1;

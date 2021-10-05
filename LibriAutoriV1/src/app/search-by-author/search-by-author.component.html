@@ -25,26 +25,38 @@
 
   <ng-container *ngIf="cardsShow">
 
+    <!-- box delle card -->
     <div id="m_cardContainer" class="col-lg-12 col-md-12 col-sm-11">
       <ng-container *ngFor="let item of arrayBooks">
 
+        <!-- conutenitore per ogni songola card -->
         <div class="m_cardStyle">
+          <!-- contenuto delle card -->
           <div class="card">
+
+            <!-- striscia grigia superiore che contiene il nome dell'autore -->
             <div class="card-header">
               <i class="fas fa-user"></i>
               <strong>{{item.author.name}}</strong>
             </div>
+
+            <!-- sezione contenuti sinferiori -->
             <ul class="list-group list-group-flush">
+
               <li class="list-group-item">
                 <i class="fas fa-birthday-cake"></i>
                 <strong>{{item.author.birthDate}}</strong>
               </li>
+
               <li class="list-group-item">
                 <i class="fas fa-transgender-alt"></i>
                 <strong>{{item.author.gender}}</strong>
               </li>
+
               <li class="list-group-item">
-                <span>Awards:</span>
+                <div class="m_textCenter">
+                  <p>Awards</p>
+                </div>
                 <!-- ciclo nel ciclo; vedi il json per capire meglio -->
                 <ul *ngFor="let awards of item.awards">
                   <li>
@@ -53,8 +65,11 @@
                   </li>
                 </ul>
               </li>
+
               <li class="list-group-item">
-                <span>Books:</span>
+                <div class="m_textCenter">
+                  <p>Books</p>
+                </div>
                 <!-- ciclo nel ciclo; vedi il json per capire meglio -->
                 <ul *ngFor="let books of item.books">
                   <li>
@@ -65,19 +80,22 @@
                     <i class="fas fa-bookmark"></i>
                     <strong>{{books.genre}}</strong>
                   </li>
-                  <li>
+                  <li class="m_listBorderBottom">
                     <i class="fas fa-calendar-alt"></i>
                     <strong>{{books.publish_date}}</strong>
                   </li>
-                  <hr>
                 </ul>
               </li>
+
             </ul>
+
+            <!-- striscia per lo scroll -->
             <div class="m_scrollDownAdvisor">
               <div class="m_arrowDownCont"><i class="fas fa-angle-double-down"></i></div>
               <div class="m_arrowDownCont"><i class="fas fa-angle-double-up"></i></div>
               <div class="m_arrowDownCont"><i class="fas fa-angle-double-down"></i></div>
             </div>
+
           </div>
         </div>
 
