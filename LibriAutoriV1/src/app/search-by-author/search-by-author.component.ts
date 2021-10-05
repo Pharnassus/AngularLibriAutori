@@ -80,15 +80,10 @@ export class SearchByAuthorComponent implements OnInit {
       if (
         //prende l'input, lo trasforma in minuscolo, toglie gli spazi e confronta con un match nel json a cui vengono applicate le stesse regole
         (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].debug).toLowerCase().replace(/[\s+]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].name).toLowerCase().replace(/[\s+]/g, '')) ||
         (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].author.name).toLowerCase().replace(/[\s+]/g, '')) ||
         (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].author.gender).toLowerCase().replace(/[\s+]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].genre).toLowerCase().replace(/[\s+]/g, '')) ||
-        (searchBookInput).toLowerCase().replace(/[\s+]/g, '') == ((searchByAuthors[i].publish_date).toLowerCase().replace(/[\s+]/g, '')) ||
         //la funzione includes è booleana: se la propr name nel json (in minuscolo e senza spazi) include l'input con le stesse regole allora è true
-        ((searchByAuthors[i].name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
-        ((searchByAuthors[i].author.name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, ''))) ||
-        ((searchByAuthors[i].publish_date).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, '')))
+        ((searchByAuthors[i].author.name).toLowerCase().replace(/[\s+]/g, '').includes((searchBookInput).toLowerCase().replace(/[\s+]/g, '')))
       ) {
         //fa partile lo spinner animandolo
         this.spinner = true;
@@ -105,7 +100,7 @@ export class SearchByAuthorComponent implements OnInit {
         setTimeout(() => {
           this.spinner = false;
           this.cardsShow = true;
-        }, 1000);
+        }, 500);
 
       }
     }

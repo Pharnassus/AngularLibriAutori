@@ -72,7 +72,7 @@
     // background-color: $testColor1;
     overflow-y: scroll;
     width: 16rem;
-    height: 230px;
+    height: 300px;
     margin-bottom: 23px;
     margin-right: 23px;
 
@@ -100,8 +100,53 @@
 
   }
 
+  // altezza minima delle card di bootstrap
   .card {
-    min-height: 230px;
+    min-height: 300px;
+
+    &:hover .m_scrollDownAdvisor {
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    // trasforma il puntatore nel ditino quando vai sui nomi dei libri [serve per il modal]
+    .m_pointerToModal {
+      cursor: pointer;
+
+      &:hover {
+        color: rgba(43, 39, 39, 0.377);
+      }
+    }
+
+    // margine delle icone
+    .fas {
+      margin-right: 15px;
+    }
+
+    .m_scrollDownAdvisor {
+      background-color: $testColor1;
+      opacity: 0.8;
+      width: 100%;
+      height: 20px;
+      position: sticky;
+      bottom: 0;
+      z-index: 2;
+      display: flex;
+
+      .m_arrowDownCont {
+        width: calc(100% / 3);
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .fas {
+          margin-right: 0;
+          color: white;
+          font-size: 10px;
+        }
+      }
+    }
   }
 
 }

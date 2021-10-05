@@ -1,5 +1,10 @@
-$testColor1: rgb(33,37,41);
+$testColor1: rgb(33, 37, 41);
 $testColor2: rgb(21, 211, 31);
 
-$bannerSuccessColor: rgb(33,37,41);
+$bannerSuccessColor: rgb(33, 37, 41);
 $bannerSuccessTextColor : white;
+
+ul,
+li {
+  list-style: none;
+}

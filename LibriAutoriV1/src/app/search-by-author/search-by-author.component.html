@@ -31,25 +31,53 @@
         <div class="m_cardStyle">
           <div class="card">
             <div class="card-header">
-              Author: <strong>{{item.author.name}}</strong>
-
+              <i class="fas fa-user"></i>
+              <strong>{{item.author.name}}</strong>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">
-                Birth: <strong>{{item.author.birthDate}}</strong>
+                <i class="fas fa-birthday-cake"></i>
+                <strong>{{item.author.birthDate}}</strong>
               </li>
               <li class="list-group-item">
-                Gender: <strong>{{item.author.gender}}</strong>
+                <i class="fas fa-transgender-alt"></i>
+                <strong>{{item.author.gender}}</strong>
               </li>
               <li class="list-group-item">
-                Awards:
-                <ul>
-                  <li *ngFor="let awards of item.awards; index as i">
-                    <strong>{{awards}}</strong>
+                <span>Awards:</span>
+                <!-- ciclo nel ciclo; vedi il json per capire meglio -->
+                <ul *ngFor="let awards of item.awards">
+                  <li>
+                    <i class="fas fa-award"></i>
+                    <strong>{{awards}};</strong>
                   </li>
                 </ul>
               </li>
+              <li class="list-group-item">
+                <span>Books:</span>
+                <!-- ciclo nel ciclo; vedi il json per capire meglio -->
+                <ul *ngFor="let books of item.books">
+                  <li>
+                    <i class="fas fa-book"></i>
+                    <strong class="m_pointerToModal">{{books.name}}</strong>
+                  </li>
+                  <li>
+                    <i class="fas fa-bookmark"></i>
+                    <strong>{{books.genre}}</strong>
+                  </li>
+                  <li>
+                    <i class="fas fa-calendar-alt"></i>
+                    <strong>{{books.publish_date}}</strong>
+                  </li>
+                  <hr>
+                </ul>
+              </li>
             </ul>
+            <div class="m_scrollDownAdvisor">
+              <div class="m_arrowDownCont"><i class="fas fa-angle-double-down"></i></div>
+              <div class="m_arrowDownCont"><i class="fas fa-angle-double-up"></i></div>
+              <div class="m_arrowDownCont"><i class="fas fa-angle-double-down"></i></div>
+            </div>
           </div>
         </div>
 
