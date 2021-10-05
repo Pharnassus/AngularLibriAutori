@@ -28,16 +28,18 @@
     <div id="m_cardContainer" class="col-lg-12 col-md-12 col-sm-11">
       <ng-container *ngFor="let item of arrayBooks">
 
-        <div class="m_cardStyle card">
-          <div class="card-header">
-            Title: <strong>{{item.name}}</strong>
+        <div class="m_cardStyle">
+          <div class="card">
+            <div class="card-header">
+              Title: <strong>{{item.name}}</strong>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Author: <strong>{{item.author.name}}</strong></li>
+              <li class="list-group-item">Gender: <strong>{{item.author.gender}}</strong></li>
+              <li class="list-group-item">Genre: <strong>{{item.genre}}</strong></li>
+              <li class="list-group-item">Publish date: <strong>{{item.publish_date}}</strong></li>
+            </ul>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Author: <strong>{{item.author.name}}</strong></li>
-            <li class="list-group-item">Gender: <strong>{{item.author.gender}}</strong></li>
-            <li class="list-group-item">Genre: <strong>{{item.genre}}</strong></li>
-            <li class="list-group-item">Publish date: <strong>{{item.publish_date}}</strong></li>
-          </ul>
         </div>
 
       </ng-container>
@@ -45,18 +47,3 @@
 
   </ng-container>
 </ng-container>
-
-<!-- test libro -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
-<div class="book">
-  <div id="pages" class="pages">
-    <div id="m_page1" class="page pageClass" (click)="flipBook()">
-      ciao
-    </div>
-    <div id="m_page2" class="page" (click)="flipBook()"></div>
-    <div id="m_page3" class="page" (click)="flipBook()">
-    </div>
-    <div id="m_page4" class="page" (click)="flipBook()"></div>
-    <div id="m_page5" class="page" (click)="flipBook()"></div>
-  </div>
-</div> -->

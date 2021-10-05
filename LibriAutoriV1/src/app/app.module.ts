@@ -29,6 +29,7 @@ import { SearchByAuthorComponent } from './search-by-author/search-by-author.com
         { path: "login", component: LoginComponent },
         { path: "home", component: HomeComponent },
         { path: "register", component: RegisterComponent },
+        { path: "searchByAuthor", component:  SearchByAuthorComponent},
       ]
     ),
     AppRoutingModule

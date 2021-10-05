@@ -1,0 +1,1801 @@
+[{
+  "debug": "all",
+  "author": {
+    "name": "Corey McCarthy",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2013-06-08"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2013-06-08"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2013-06-08"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Political",
+      "publish_date": "2013-06-08"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Eric Francis",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2003-08-30"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2003-08-30"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2003-08-30"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2003-08-30"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Trevor Lane",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-11-05"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-11-05"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-11-05"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Speculative",
+      "publish_date": "2010-11-05"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Maurice Huff",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-01-11"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-01-11"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-01-11"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2006-01-11"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Michael Sutton",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2005-11-06"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2005-11-06"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2005-11-06"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Epistolary",
+      "publish_date": "2005-11-06"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Logan Anderson",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2013-12-16"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2013-12-16"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2013-12-16"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Romance",
+      "publish_date": "2013-12-16"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Stephen Lindsey",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2007-11-08"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2007-11-08"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2007-11-08"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fantasy",
+      "publish_date": "2007-11-08"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Philip Thompson",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2009-08-12"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2009-08-12"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2009-08-12"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2009-08-12"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Keith Mack",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2002-06-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2002-06-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2002-06-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Political",
+      "publish_date": "2002-06-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Craig Moore",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-04-02"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-04-02"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-04-02"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Epistolary",
+      "publish_date": "2010-04-02"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Ronald Cole",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2013-04-14"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2013-04-14"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2013-04-14"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Western",
+      "publish_date": "2013-04-14"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Leo Drake",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2004-11-25"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2004-11-25"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2004-11-25"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Thriller",
+      "publish_date": "2004-11-25"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Jeremiah Rose",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-06-15"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-06-15"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-06-15"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Science",
+      "publish_date": "2001-06-15"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Marc Floyd",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2012-12-04"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2012-12-04"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2012-12-04"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Paranoid",
+      "publish_date": "2012-12-04"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Samuel Wheeler",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2012-06-02"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2012-06-02"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2012-06-02"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Saga",
+      "publish_date": "2012-06-02"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Jeremy Arnold",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2009-08-08"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2009-08-08"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2009-08-08"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2009-08-08"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Marc Rodgers",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2005-08-31"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2005-08-31"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2005-08-31"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Thriller",
+      "publish_date": "2005-08-31"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Evan Perez",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-09-29"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-09-29"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-09-29"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2015-09-29"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Victor Horton",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-06-30"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-06-30"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-06-30"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2010-06-30"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Floyd Cross",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2014-06-23"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2014-06-23"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2014-06-23"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Adventure",
+      "publish_date": "2014-06-23"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Travis Craig",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2006-09-07"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Bernard Pratt",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Philosophical",
+      "publish_date": "2001-09-26"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Shawn Obrien",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Historical",
+      "publish_date": "2015-04-27"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Allen Robertson",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Docufiction",
+      "publish_date": "2015-08-05"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Bradley Dennis",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2003-11-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Edwin Day",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2015-01-18"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "James Snyder",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2010-06-28"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Paul Morales",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Satire",
+      "publish_date": "2003-10-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Jeffery Payne",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Epistolary",
+      "publish_date": "2001-12-08"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Derek Rodriquez",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2006-01-23"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Travis Craig",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-09-07"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2006-09-07"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Bernard Pratt",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-09-26"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Philosophical",
+      "publish_date": "2001-09-26"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Shawn Obrien",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-04-27"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Historical",
+      "publish_date": "2015-04-27"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Allen Robertson",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-08-05"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Docufiction",
+      "publish_date": "2015-08-05"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Bradley Dennis",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2003-11-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2003-11-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Edwin Day",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-01-18"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2015-01-18"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "James Snyder",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-06-28"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2010-06-28"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Paul Morales",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2003-10-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Satire",
+      "publish_date": "2003-10-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Jeffery Payne",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-12-08"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Epistolary",
+      "publish_date": "2001-12-08"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Derek Rodriquez",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-01-23"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2006-01-23"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Dylan Schwartz",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-05-18"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-05-18"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-05-18"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Science",
+      "publish_date": "2006-05-18"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Alfred Pope",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2005-06-05"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2005-06-05"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2005-06-05"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Satire",
+      "publish_date": "2005-06-05"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Leo Marsh",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2008-08-25"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2008-08-25"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2008-08-25"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Epistolary",
+      "publish_date": "2008-08-25"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Mason Henry",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2008-11-14"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2008-11-14"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2008-11-14"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Horror",
+      "publish_date": "2008-11-14"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Steven Jimenez",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2011-08-01"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2011-08-01"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2011-08-01"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2011-08-01"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Devin Crawford",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-11-28"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-11-28"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-11-28"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Mystery",
+      "publish_date": "2006-11-28"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Gilbert Jordan",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2008-02-18"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2008-02-18"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2008-02-18"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Comic",
+      "publish_date": "2008-02-18"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Don Carr",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2010-05-09"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2010-05-09"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2010-05-09"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Satire",
+      "publish_date": "2010-05-09"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Shane Glover",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2005-02-02"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2005-02-02"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2005-02-02"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Magic",
+      "publish_date": "2005-02-02"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Peter Russell",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-10-23"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-10-23"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-10-23"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Philosophical",
+      "publish_date": "2001-10-23"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Fred Chambers",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-05-01"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-05-01"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-05-01"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Speculative",
+      "publish_date": "2015-05-01"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Vincent Holmes",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2007-01-22"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2007-01-22"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2007-01-22"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Romance",
+      "publish_date": "2007-01-22"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Alvin Evans",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2011-08-30"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2011-08-30"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2011-08-30"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Speculative",
+      "publish_date": "2011-08-30"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Oscar McCoy",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2002-11-22"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2002-11-22"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2002-11-22"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Romance",
+      "publish_date": "2002-11-22"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Dominic Frank",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2015-07-19"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2015-07-19"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2015-07-19"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Erotic",
+      "publish_date": "2015-07-19"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Jonathan Davis",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2013-10-17"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2013-10-17"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2013-10-17"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Urban",
+      "publish_date": "2013-10-17"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Daniel Hoffman",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2001-07-11"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2001-07-11"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2001-07-11"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Satire",
+      "publish_date": "2001-07-11"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Willie Bridges",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2000-10-02"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2000-10-02"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2000-10-02"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Fiction",
+      "publish_date": "2000-10-02"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Oscar Diaz",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2006-12-15"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2006-12-15"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2006-12-15"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Political",
+      "publish_date": "2006-12-15"
+    }
+  }
+}, {
+  "debug": "all",
+  "author": {
+    "name": "Leroy Pearson",
+    "birthDate": "dd-mm-yyyy",
+    "gender": "male"
+  },
+  "awards": ["Premio Strega", "Premio Pulitzer Narrativa", "Premio Nobel per la Letteratura"],
+  "books": {
+    "id_0":{
+      "name": "1st Book",
+      "genre": "A genre",
+      "publish_date": "2012-07-28"
+    },
+    "id_1":{
+      "name": "2nd Book",
+      "genre": "Another genre",
+      "publish_date": "2012-07-28"
+    },
+    "id_2":{
+      "name": "3rd Book",
+      "genre": "Yet another genre",
+      "publish_date": "2012-07-28"
+    },
+    "id_3":{
+      "name": " Book",
+      "genre": "Western",
+      "publish_date": "2012-07-28"
+    }
+  }
+}]

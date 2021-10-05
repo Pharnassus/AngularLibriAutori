@@ -11,6 +11,7 @@ import books_authors from '../_services/books_authors.json';
 export class HomeComponent implements OnInit{
 
   userSession = true;
+
   ngOnInit() {
     console.log(this.userSession);
     this.userSession;
@@ -140,37 +141,5 @@ export class HomeComponent implements OnInit{
       })
 
   }
-
-  // flipBook() {
-
-  //   let pages = document.getElementsByClassName('page');
-  //   let page1id = (<HTMLInputElement>document.getElementById('m_page1')).innerHTML;
-
-  //   // if (page1id == 'ciao' ) {
-  //   //   pages[1].classList.add('flipped');
-  //   //   console.log(pages[1]);
-
-  //   // }
-
-
-
-  //   for (var i = 0; i < pages.length; i++) {
-
-  //       if (page1id == 'ciao' ) {
-  //         pages[i].classList.remove('flipped');
-  //         pages[i].classList.remove('flipped');
-  //         break
-
-  //       }
-  //       else {
-  //         console.log(pages[i].classList);
-  //         pages[i].classList.add('flipped');
-  //         pages[i].classList.add('flipped');
-
-  //         break
-  //       }
-
-  //   }
-  // }
 
 }
