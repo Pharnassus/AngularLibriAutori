@@ -101,7 +101,7 @@ export class LoginComponent extends HomeComponent implements OnInit, AfterViewIn
         setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
-          this.testLog = false;
+          this.userSession = false;
         }, 4500);
 
         break

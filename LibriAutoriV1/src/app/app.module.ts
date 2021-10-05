@@ -9,6 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MinispinnerComponent } from './minispinner/minispinner.component';
+import { SearchByAuthorComponent } from './search-by-author/search-by-author.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { MinispinnerComponent } from './minispinner/minispinner.component';
     RegisterComponent,
     HomeComponent,
     MinispinnerComponent,
+    SearchByAuthorComponent,
   ],
   imports: [
     BrowserModule,

@@ -10,10 +10,10 @@ import books_authors from '../_services/books_authors.json';
 })
 export class HomeComponent implements OnInit{
 
-  testLog = true;
+  userSession = true;
   ngOnInit() {
-    console.log(this.testLog);
-    this.testLog;
+    console.log(this.userSession);
+    this.userSession;
   }
 
   // struttura json libri e autori
@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit{
       //[ciclo] prende in considerazione l'input se è minore di 3 blocca tutto
       if (
         searchBookInput == null ||
-        (searchBookInput).length <= 3
+        (searchBookInput).length < 3
       ) {
         //azzerato il valore dell'input e cambiata la label, porta il counterJson a false cosi che dopo il break non entri nell'if dopo il ciclo for
         (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
