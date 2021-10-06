@@ -59,12 +59,14 @@
 
       span {
         margin-right: 5px;
+        color: $linkLoginRegisterColor;
       }
 
       a {
         text-decoration: none;
         font-size: 18px;
-        color: #0d92fe;
+        color: $linkLoginRegisterColor;
+        text-decoration: underline;
         cursor: pointer;
       }
     }
