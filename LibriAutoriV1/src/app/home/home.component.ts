@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from './../login/login.component';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import books_authors from '../_services/books_authors.json';
@@ -8,13 +9,13 @@ import books_authors from '../_services/books_authors.json';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
-
-  userSession = true;
+export class HomeComponent extends LoginComponent implements OnInit, AfterViewInit{
 
   ngOnInit() {
+
+  }
+  ngAfterViewInit() {
     console.log(this.userSession);
-    this.userSession;
   }
 
   // struttura json libri e autori

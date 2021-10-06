@@ -12,19 +12,14 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent extends HomeComponent implements OnInit, AfterViewInit {
+export class LoginComponent implements OnInit{
 
   // AGGIUNTA "private router: Router" ALL'INTERNO DEL COSTRUTTORE PER IL REDIRECT DELLA PAGINA NELLA FUNZIONE SUBMIT [pt.2]
   constructor(public router: Router) {
-    super();
-  }
 
+  }
 
   ngOnInit() {
-
-  }
-
-  ngAfterViewInit(){
 
   }
 
@@ -47,7 +42,7 @@ export class LoginComponent extends HomeComponent implements OnInit, AfterViewIn
   errorState = false;
   errorStateEmpty = false;
   welcome = false;
-  userSession: boolean;
+  userSession: boolean = true;
 
   submit() {
 
@@ -71,7 +66,7 @@ export class LoginComponent extends HomeComponent implements OnInit, AfterViewIn
       // console.log(users[i].user);
 
       // [ciclo] controlla se gli input iniziali so vuoti o meno
-      if ((<HTMLInputElement>document.getElementById('floatingPassword')).value == '' || (<HTMLInputElement>document.getElementById('floatingInput')).value == '' ) {
+      if ((<HTMLInputElement>document.getElementById('floatingPassword')).value == '' || (<HTMLInputElement>document.getElementById('floatingInput')).value == '') {
         this.spinner = false;
         this.error = 0;
         this.errorStateEmpty = true;
@@ -98,11 +93,14 @@ export class LoginComponent extends HomeComponent implements OnInit, AfterViewIn
         }, 1500);
 
         // simulazione delay reindirizzamento alla home
-        setTimeout(() => {
+        // setTimeout(() => {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/home']);
-          this.userSession = false;
-        }, 4500);
+          console.log(this.userSession);
+          this.userSession = true;
+          console.log(this.userSession);
+
+        // }, 4500);
 
         break
 
