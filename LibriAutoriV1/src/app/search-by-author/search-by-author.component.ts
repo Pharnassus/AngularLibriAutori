@@ -144,4 +144,8 @@ export class SearchByAuthorComponent implements OnInit {
 
   }
 
+  cardCoverOff() {
+    (<HTMLInputElement>document.getElementById('m_coverCards')).style.display = "none";
+  }
+
 }

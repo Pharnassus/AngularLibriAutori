@@ -1,6 +1,56 @@
 [{
   "debug": "all",
   "author": {
+    "name": "J. K. Rowling",
+    "birthDate": "31-07-1965",
+    "gender": "Female"
+  },
+  "awards": [
+    "The Bookseller Author of the Year 1998",
+    "British Book Awards - Author of the Year 1999",
+    "Buchmarkt Autorin des Jahres 1999 und 2000",
+    "Laurea honoris causa dell'università Exeter 2000",
+    "Heidelberger Leander 2000"
+  ],
+  "books": [{
+      "name": "Harry Potter and the Philosopher's Stone",
+      "genre": "Fantasy",
+      "publish_date": "1997"
+    },
+    {
+      "name": "Harry Potter and the Chamber of Secrets",
+      "genre": "Fantasy",
+      "publish_date": "1998"
+    },
+    {
+      "name": "Harry Potter and the Prisoner of Azkaban",
+      "genre": "Fantasy",
+      "publish_date": "1999"
+    },
+    {
+      "name": "Harry Potter and the Goblet of Fire",
+      "genre": "Fantasy",
+      "publish_date": "2000"
+    },
+    {
+      "name": "Harry Potter and the Order of the Phoenix",
+      "genre": "Fantasy",
+      "publish_date": "2003"
+    },
+    {
+      "name": "Harry Potter and the Half-blood Prince",
+      "genre": "Fantasy",
+      "publish_date": "2005"
+    },
+    {
+      "name": "Harry Potter and the Deathly Hallows",
+      "genre": "Fantasy",
+      "publish_date": "2007"
+    }
+  ]
+}, {
+  "debug": "all",
+  "author": {
     "name": "Corey McCarthy",
     "birthDate": "dd-mm-yyyy",
     "gender": "Male"
