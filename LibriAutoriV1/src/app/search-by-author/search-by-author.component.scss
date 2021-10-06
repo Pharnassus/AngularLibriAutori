@@ -60,6 +60,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 
   // larghezza scrollbar
   &::-webkit-scrollbar {
@@ -83,7 +84,7 @@
   }
 
   .m_cardStyle {
-    background: white;
+    background: black;
     overflow-y: scroll;
     width: 16rem;
     height: 300px;
@@ -116,9 +117,20 @@
       }
     }
 
+    #m_coverCards {
+      background-image: linear-gradient(rgba(48, 41, 41, 0.2), rgba(10, 10, 10, 0.2)), url("../../assets/_img/ancientBook2.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 16rem;
+      height: 300px;
+      position: absolute;
+      border-radius: 5px 3px 3px 5px;
+      z-index: 3;
 
-
-
+      &:hover {
+        cursor: pointer;
+      }
+    }
 
     // altezza minima delle card di bootstrap
     .card {
@@ -144,9 +156,11 @@
       }
 
       .m_cardContentUnderHeader.m_listBorderBottom {
+
         .m_containerContentInCard {
           margin-bottom: 15px;
         }
+
       }
 
       li {

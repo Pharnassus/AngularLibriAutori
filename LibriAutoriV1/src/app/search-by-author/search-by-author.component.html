@@ -31,10 +31,13 @@
 
         <!-- conutenitore per ogni songola card -->
         <div class="m_cardStyle">
-          <!-- contenuto delle card -->
-          <div class="card">
-            <!-- cover libro -->
-            <div id="m_coverCards">
+
+          <!-- cover libro -->
+          <div id="m_coverCards" (click)="ciao()"></div>
+
+          <ng-container *ngIf="coverCards">
+            <!-- contenuto delle card -->
+            <div class="card">
 
               <!-- striscia grigia superiore che contiene il nome dell'autore -->
               <div class="card-header">
@@ -123,9 +126,9 @@
               <div class="m_scrollDownAdvisor">
                 <div class="m_arrowDownCont"><i class="fas fa-arrows-alt-v"></i></div>
               </div>
-
             </div>
-          </div>
+          </ng-container>
+
         </div>
 
       </ng-container>

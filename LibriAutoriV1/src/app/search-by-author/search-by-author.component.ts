@@ -33,6 +33,7 @@ export class SearchByAuthorComponent implements OnInit {
   error = 1;
   counterJson: boolean;
   cardsShow = false;
+  coverCards = false;
   spinner = false;
   //chiedi
   arrayBooks: string[] = [];
@@ -101,6 +102,11 @@ export class SearchByAuthorComponent implements OnInit {
           this.spinner = false;
           this.cardsShow = true;
         }, 500);
+
+        //ritarda la comparsa delle card per un effetto grafico nel caricamento
+        setTimeout(() => {
+          this.coverCards = true;
+        }, 1000);
 
       }
     }
