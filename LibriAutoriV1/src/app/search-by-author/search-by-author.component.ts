@@ -26,6 +26,7 @@ export class SearchByAuthorComponent implements OnInit {
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER RECUPERARE I DATI DALL'INPUT
   searchBookInput: string;
+  modalBook: string;
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
   arrayBooks: string[] = [];
@@ -35,7 +36,7 @@ export class SearchByAuthorComponent implements OnInit {
   coverCards: boolean = false;
   spinner: boolean = false;
   userSession: boolean = true;
-  modalVisibility: boolean = true;
+
 
 
   //[funzione al click dentro l'input]
@@ -144,8 +145,35 @@ export class SearchByAuthorComponent implements OnInit {
 
   }
 
+  modalVisibility: boolean = false;
+  modalBookArray: string[] = [];
+
   openModal() {
-    console.log("open");
+
+    let bookName = (<HTMLInputElement>document.getElementById('m_bookNameModel')).innerHTML;
+    console.log(bookName);
+
+    //[ciclo] cancella l'array ad ogni click cosi da non duplicarlo
+    if (this.modalBookArray.length >= 0) {
+      while (this.modalBookArray.length) {
+        this.modalBookArray.pop();
+      }
+    }
+
+    //[ciclo] ciclo tutto il json
+    for (let i = 0; i < searchByAuthors.length; i++) {
+      //[ciclo] per ogni posizione degli oggetti del json prendo l'array di oggetti book e lo ciclo partendo da 0 (j)
+      for (let j = 0; j < searchByAuthors[i].books.length; j++) {
+        //[ciclo] grazie al j posso verificare ogni posizione dell'array di oggetti book e filtrare per nome; se trova quello che mi serve e lo trova sicuro allora pusha nell'array
+        if (bookName == searchByAuthors[i].books[j].name) {
+          this.modalBookArray.push(searchByAuthors[i].books[j]);
+        }
+
+      }
+
+
+    }
+
   }
 
 }
