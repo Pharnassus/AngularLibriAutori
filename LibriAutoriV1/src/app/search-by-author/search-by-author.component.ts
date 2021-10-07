@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import searchByAuthors from '../_services/searchByAuthors.json';
@@ -147,11 +147,16 @@ export class SearchByAuthorComponent implements OnInit {
 
   modalVisibility: boolean = false;
   modalBookArray: string[] = [];
+  // manipolare il dom col typescript [part_1]; nell'html, all'interno del tag ho aggiunto #m_bookNameModel
+  @ViewChild('m_bookNameModel', {read: ElementRef}) m_bookNameModel: ElementRef<HTMLElement>
 
   openModal() {
 
-    let bookName = (<HTMLInputElement>document.getElementById('m_bookNameModel')).innerHTML;
-    console.log(bookName);
+    // let bookName = (<HTMLInputElement>document.getElementById('m_bookNameModel')).innerHTML;
+    // manipolare il dom col typescript [part_2]; è la stessa roba che ho scritto sopra ma in typescript
+    let bookName = this.m_bookNameModel.nativeElement.innerHTML;
+    console.log("nome cliccato: " + bookName);
+
 
     //[ciclo] cancella l'array ad ogni click cosi da non duplicarlo
     if (this.modalBookArray.length >= 0) {
@@ -165,15 +170,26 @@ export class SearchByAuthorComponent implements OnInit {
       //[ciclo] per ogni posizione degli oggetti del json prendo l'array di oggetti book e lo ciclo partendo da 0 (j)
       for (let j = 0; j < searchByAuthors[i].books.length; j++) {
         //[ciclo] grazie al j posso verificare ogni posizione dell'array di oggetti book e filtrare per nome; se trova quello che mi serve e lo trova sicuro allora pusha nell'array
+
+        // let bookName = this.m_bookNameModel.nativeElement.innerHTML;
         if (bookName == searchByAuthors[i].books[j].name) {
+
+          // riempie l'array temporaneo con le informazioni che mi servono
           this.modalBookArray.push(searchByAuthors[i].books[j]);
+          // fa apparire il modal
+          this.modalVisibility = true;
+          // fa sparire le carte
+          this.cardsShow = false;
         }
 
       }
-
-
     }
-
   }
 
+  exitModal() {
+    // fa apparire il modal
+    this.modalVisibility = false;
+    // fa sparire le carte
+    this.cardsShow = true;
+  }
 }

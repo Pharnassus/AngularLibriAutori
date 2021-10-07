@@ -33,7 +33,9 @@
         <div class="m_cardStyle">
 
           <!-- cover libro -->
-          <div id="m_coverCards"></div>
+          <div id="m_coverCards">
+            <p>{{item.author.name}}</p>
+          </div>
 
           <ng-container *ngIf="coverCards">
             <!-- contenuto delle card -->
@@ -45,7 +47,9 @@
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="m_containerContentInCard">
-                  <strong>{{item.author.name}}</strong>
+                  <h3>
+                    <strong>{{item.author.name}}</strong>
+                  </h3>
                 </div>
               </div>
 
@@ -98,7 +102,7 @@
                         <i class="fas fa-book"></i>
                       </div>
                       <div class="m_containerContentInCard">
-                        <strong id="m_bookNameModel" class="m_pointerToModal" (click)="openModal()">{{books.name}}</strong>
+                        <strong #m_bookNameModel class="m_pointerToModal" (click)="openModal()">{{books.name}}</strong>
                       </div>
                     </li>
                     <li class="m_cardContentUnderHeader">
@@ -141,24 +145,71 @@
 <ng-container *ngIf="modalVisibility">
 
   <section id="m_modalContainer">
-    <div id="m_modal" class="row col-sm-8 g-3">
-      <!--
-        poster
-      titolo
-      codice isbn
-      genere
-      data
-      descrizione
-    -->
-    <div class="m_leftSideModal">
+    <div id="m_modal" class="row col-sm-10 g-3">
 
-    </div>
-    <div class="m_rightSideModal">
-      <div class="m_exit">
-        <i class="far fa-times-circle"></i>
+      <div class="m_leftSideModal">
+        <ng-container *ngFor="let item of modalBookArray">
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Title</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.name}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>ISBN</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.isbn}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Genre</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.genre}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Publish Date</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.publish_date}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Description</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.description}}</strong>
+            </div>
+          </div>
+
+        </ng-container>
       </div>
 
-    </div>
+      <div class="m_rightSideModal">
+        <div class="m_exit" (click)="exitModal()">
+          <i class="far fa-times-circle"></i>
+        </div>
+
+        <ng-container *ngFor="let item of modalBookArray; index as i">
+          <div class="m_posterContainer">
+            <img [src]="item.poster" alt="Poster">
+          </div>
+        </ng-container>
+      </div>
+
     </div>
   </section>
 
