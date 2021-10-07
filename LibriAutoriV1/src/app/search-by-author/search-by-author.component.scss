@@ -93,6 +93,14 @@
     border: 1px solid black;
     border-radius: 7px 3px 3px 7px;
 
+    &:hover {
+      background: white;
+    }
+
+    &:hover #m_coverCards {
+      visibility: hidden;
+    }
+
     // larghezza scrollbar
     &::-webkit-scrollbar {
       width: 7px;
@@ -188,7 +196,7 @@
         cursor: pointer;
 
         &:hover {
-          color: rgba(43, 39, 39, 0.377);
+          color: #5F3413;
         }
       }
 
@@ -223,10 +231,65 @@
 }
 
 
+#m_modalContainer {
+  display: flex;
+  justify-content: center;
+
+  #m_modal {
+    background: white;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+
+
+    .m_leftSideModal {
+      width: 50%;
+      height: 100%;
+      background: green;
+    }
+
+    .m_rightSideModal {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      background: darkgreen;
+
+      .m_exit {
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+
+
 
 
 //_______________________________________________________________________________________________________________________________________
 //QUERIES
+
+@media screen and (min-width: 993px) {
+  #m_formHome {
+    .m_searchForm {
+
+      //input search
+      .m_inputSearchContainer {
+        margin-left: 45px !important;
+      }
+
+    }
+  }
+}
 
 @media screen and (max-width: 1199px) {
   #m_formHome {

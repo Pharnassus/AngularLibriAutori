@@ -10,7 +10,6 @@ import searchByAuthors from '../_services/searchByAuthors.json';
 })
 export class SearchByAuthorComponent implements OnInit {
 
-  userSession = true;
 
   constructor() { }
 
@@ -29,14 +28,15 @@ export class SearchByAuthorComponent implements OnInit {
   searchBookInput: string;
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
-  // test : boolean;
-  error = 1;
-  counterJson: boolean;
-  cardsShow = false;
-  coverCards = false;
-  spinner = false;
-  //chiedi
   arrayBooks: string[] = [];
+  error: number = 1;
+  counterJson: boolean;
+  cardsShow: boolean = false;
+  coverCards: boolean = false;
+  spinner: boolean = false;
+  userSession: boolean = true;
+  modalVisibility: boolean = true;
+
 
   //[funzione al click dentro l'input]
   //cambia la label e imposta la ricerca a null cosi da poter entrare nel 3° if piu in basso
@@ -144,8 +144,8 @@ export class SearchByAuthorComponent implements OnInit {
 
   }
 
-  cardCoverOff() {
-    (<HTMLInputElement>document.getElementById('m_coverCards')).style.display = "none";
+  openModal() {
+    console.log("open");
   }
 
 }
