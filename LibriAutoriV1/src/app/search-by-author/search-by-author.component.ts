@@ -133,8 +133,8 @@ export class SearchByAuthorComponent implements OnInit {
 
     // Loop over them and prevent submission
     Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
+      .forEach(function (form: { addEventListener: (arg0: string, arg1: (event: any) => void, arg2: boolean) => void; checkValidity: () => any; classList: { add: (arg0: string) => void; }; }) {
+        form.addEventListener('submit', function (event: { preventDefault: () => void; stopPropagation: () => void; }) {
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
@@ -153,11 +153,13 @@ export class SearchByAuthorComponent implements OnInit {
   // manipolare il dom col typescript [part_1]; nell'html, all'interno del tag ho aggiunto #m_bookNameModel
   @ViewChild('m_bookNameModel', { read: ElementRef }) m_bookNameModel: ElementRef<HTMLElement>
 
-  openModal() {
+  openModal(pippo) {
 
     // let bookName = (<HTMLInputElement>document.getElementById('m_bookNameModel')).innerHTML;
     // manipolare il dom col typescript [part_2]; è la stessa roba che ho scritto sopra ma in typescript
-    let bookName = this.m_bookNameModel.nativeElement.innerHTML;
+    // let bookName = this.m_bookNameModel.nativeElement.innerHTML;
+
+    let bookName = pippo.name;
     console.log("nome cliccato: " + bookName);
 
 
