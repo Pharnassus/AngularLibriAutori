@@ -38,6 +38,7 @@ export class SearchByAuthorComponent implements OnInit {
   userSession: boolean = true;
 
 
+  // FUNZIONI DELLA RICERCA LIBRI ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   //[funzione al click dentro l'input]
   //cambia la label e imposta la ricerca a null cosi da poter entrare nel 3° if piu in basso
@@ -126,7 +127,7 @@ export class SearchByAuthorComponent implements OnInit {
     }
 
 
-    //VALIDAZIONI FORM BOOTSTRAP
+    //validazione bootstrap
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     var forms = document.querySelectorAll('.needs-validation')
 
@@ -145,10 +146,12 @@ export class SearchByAuthorComponent implements OnInit {
 
   }
 
+  // SEZIONE MODAL ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
   modalVisibility: boolean = false;
   modalBookArray: string[] = [];
   // manipolare il dom col typescript [part_1]; nell'html, all'interno del tag ho aggiunto #m_bookNameModel
-  @ViewChild('m_bookNameModel', {read: ElementRef}) m_bookNameModel: ElementRef<HTMLElement>
+  @ViewChild('m_bookNameModel', { read: ElementRef }) m_bookNameModel: ElementRef<HTMLElement>
 
   openModal() {
 

@@ -1,13 +1,17 @@
 <ng-container *ngIf="userSession">
+
+  <!-- form per la ricerca dei libri -->
   <section id="m_formHome">
     <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
 
+      <!-- barra input -->
       <div class="m_inputSearchContainer form-floating mb-3">
         <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
           [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
         <label id="m_labelError" for="m_searchBook">Start your search</label>
       </div>
 
+      <!-- pulsante di ricerca -->
       <div id="m_searchSpinnerContainer">
         <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
           <i class="fas fa-search" *ngIf="spinner == false"></i>
@@ -41,7 +45,7 @@
             <!-- contenuto delle card -->
             <div class="card">
 
-              <!-- striscia grigia superiore che contiene il nome dell'autore -->
+              <!-- striscia superiore che contiene il nome dell'autore -->
               <div class="card-header">
                 <div class="m_containerIconInCard">
                   <i class="fas fa-user"></i>
@@ -53,9 +57,10 @@
                 </div>
               </div>
 
-              <!-- sezione contenuti sinferiori -->
+              <!-- sezione contenuti inferiori -->
               <ul class="list-group list-group-flush">
 
+                <!-- sezione data di nascita -->
                 <li class="m_cardContentUnderHeader list-group-item">
                   <div class="m_containerIconInCard">
                     <i class="fas fa-birthday-cake"></i>
@@ -65,6 +70,7 @@
                   </div>
                 </li>
 
+                <!-- sezione gender -->
                 <li class="m_cardContentUnderHeader list-group-item">
                   <div class="m_containerIconInCard">
                     <i class="fas fa-transgender-alt"></i>
@@ -74,6 +80,7 @@
                   </div>
                 </li>
 
+                <!-- sezione riconoscimenti -->
                 <li class="list-group-item">
                   <div class="m_textCenter">
                     <p>Awards</p>
@@ -91,12 +98,13 @@
                   </ul>
                 </li>
 
+                <!-- sezione libri -->
                 <li class="list-group-item">
                   <div class="m_textCenter">
                     <p>Books</p>
                   </div>
                   <!-- ciclo nel ciclo; vedi il json per capire meglio -->
-                  <ul *ngFor="let books of item.books">
+                  <ul *ngFor="let books of item.books; index as i">
                     <li class="m_cardContentUnderHeader">
                       <div class="m_containerIconInCard">
                         <i class="fas fa-book"></i>
@@ -144,9 +152,12 @@
 <!-- modal libri -->
 <ng-container *ngIf="modalVisibility">
 
+  <!-- contenitore per il flex -->
   <section id="m_modalContainer">
-    <div id="m_modal" class="row col-sm-10 g-3">
+    <!-- contenitore responsive -->
+    <div id="m_modal" class="row col-sm-8 g-3">
 
+      <!-- parte sinistra del modal -->
       <div class="m_leftSideModal">
         <ng-container *ngFor="let item of modalBookArray">
 
@@ -198,12 +209,13 @@
         </ng-container>
       </div>
 
+      <!-- parte destra del modal -->
       <div class="m_rightSideModal">
         <div class="m_exit" (click)="exitModal()">
           <i class="far fa-times-circle"></i>
         </div>
 
-        <ng-container *ngFor="let item of modalBookArray; index as i">
+        <ng-container *ngFor="let item of modalBookArray">
           <div class="m_posterContainer">
             <img [src]="item.poster" alt="Poster">
           </div>

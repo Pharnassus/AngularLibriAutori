@@ -216,10 +216,11 @@
 
       // trasforma il puntatore nel ditino quando vai sui nomi dei libri [serve per il modal]
       .m_pointerToModal {
+        display: block;
         cursor: pointer;
 
         &:hover {
-          color: #5F3413;
+          color: #bd601a;
         }
       }
 
@@ -260,7 +261,7 @@
 
   #m_modal {
     background: white;
-    height: 60vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -339,7 +340,7 @@
       }
 
       .m_posterContainer {
-        width: 60%;
+        width: 80%;
         height: 90%;
 
         img {
