@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { SearchBooksV1 } from '../search-books-v1/home.component';
+import { Component, OnInit } from '@angular/core';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import users from '../_services/users.json';
@@ -12,7 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
 
   // AGGIUNTA "private router: Router" ALL'INTERNO DEL COSTRUTTORE PER IL REDIRECT DELLA PAGINA NELLA FUNZIONE SUBMIT [pt.2]
   constructor(public router: Router) {
@@ -89,18 +88,15 @@ export class LoginComponent implements OnInit{
           this.welcome = true;
 
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-          // this.router.navigate(['/home']);
-        }, 1500);
+          // this.router.navigate(['/searchByAuthor']);
+        }, 500);
 
         // simulazione delay reindirizzamento alla home
-        // setTimeout(() => {
-          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-          this.router.navigate(['/home']);
-          console.log(this.userSession);
-          this.userSession = true;
-          console.log(this.userSession);
+        setTimeout(() => {
+        // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
+        this.router.navigate(['/searchByAuthor']);
 
-        // }, 4500);
+        }, 2500);
 
         break
 

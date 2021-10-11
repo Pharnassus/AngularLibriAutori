@@ -9,7 +9,7 @@ import { RegisterComponent } from './register/register.component';
 import { SearchBooksV1 } from './search-books-v1/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MinispinnerComponent } from './minispinner/minispinner.component';
-import { SearchByAuthorComponent } from './search-by-author/search-by-author.component';
+import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-author.component';
 
 
 @NgModule({
@@ -19,7 +19,7 @@ import { SearchByAuthorComponent } from './search-by-author/search-by-author.com
     RegisterComponent,
     SearchBooksV1,
     MinispinnerComponent,
-    SearchByAuthorComponent,
+    SearchBooksV2ByAuthors,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +29,7 @@ import { SearchByAuthorComponent } from './search-by-author/search-by-author.com
         { path: "login", component: LoginComponent },
         { path: "home", component: SearchBooksV1 },
         { path: "register", component: RegisterComponent },
-        { path: "searchByAuthor", component:  SearchByAuthorComponent},
+        { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
       ]
     ),
     AppRoutingModule

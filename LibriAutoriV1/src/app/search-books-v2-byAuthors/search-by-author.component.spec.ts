@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchByAuthorComponent } from './search-by-author.component';
+import { SearchBooksV2ByAuthors } from './search-by-author.component';
 
-describe('SearchByAuthorComponent', () => {
-  let component: SearchByAuthorComponent;
-  let fixture: ComponentFixture<SearchByAuthorComponent>;
+describe('SearchBooksV2ByAuthors', () => {
+  let component: SearchBooksV2ByAuthors;
+  let fixture: ComponentFixture<SearchBooksV2ByAuthors>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchByAuthorComponent ]
+      declarations: [ SearchBooksV2ByAuthors ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchByAuthorComponent);
+    fixture = TestBed.createComponent(SearchBooksV2ByAuthors);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

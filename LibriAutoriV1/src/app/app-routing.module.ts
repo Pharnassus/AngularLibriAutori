@@ -3,14 +3,14 @@ import { RouterModule, Routes } from "@angular/router";
 import { SearchBooksV1 } from "./search-books-v1/home.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
-import { SearchByAuthorComponent } from './search-by-author/search-by-author.component';
+import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-author.component';
 
 
 const routes: Routes = [
   { path: "home", component: SearchBooksV1 },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "searchByAuthor", component:  SearchByAuthorComponent},
+  { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
 
   // otherwise redirect to home
   { path: "**", redirectTo: "login" },
