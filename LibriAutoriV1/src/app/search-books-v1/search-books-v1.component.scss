@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 
-#m_formHome {
+#m_formSearchBooksV1 {
   // background-color: $testColor1;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@
 //QUERIES
 
 @media screen and (max-width: 1199px) {
-  #m_formHome {
+  #m_formSearchBooksV1 {
     .m_searchForm {
 
       //input search
@@ -109,7 +109,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  #m_formHome {
+  #m_formSearchBooksV1 {
     .m_searchForm {
 
       //input search

@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import books_authors from '../_services/books_authors.json';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-searchBooksV1',
   templateUrl: './search-books-v1.component.html',
   styleUrls: ['./search-books-v1.component.scss']
 })

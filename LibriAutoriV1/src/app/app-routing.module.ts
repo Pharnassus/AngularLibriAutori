@@ -7,9 +7,9 @@ import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-books
 
 
 const routes: Routes = [
-  { path: "home", component: SearchBooksV1 },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
+  { path: "searchBooksV1", component: SearchBooksV1 },
   { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
 
   // otherwise redirect to home

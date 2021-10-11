@@ -1,6 +1,6 @@
 @import "../../styles.scss";
 
-#m_formHome {
+#m_formSearchBooksV2 {
   display: flex;
   justify-content: center;
 
@@ -359,7 +359,7 @@
 //QUERIES
 
 @media screen and (min-width: 993px) {
-  #m_formHome {
+  #m_formSearchBooksV2 {
     .m_searchForm {
 
       //input search
@@ -372,7 +372,7 @@
 }
 
 @media screen and (max-width: 1199px) {
-  #m_formHome {
+  #m_formSearchBooksV2 {
     .m_searchForm {
 
       //input search
@@ -389,7 +389,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  #m_formHome {
+  #m_formSearchBooksV2 {
     .m_searchForm {
 
       //input search
