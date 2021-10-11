@@ -159,6 +159,7 @@ export class SearchByAuthorComponent implements OnInit {
     // manipolare il dom col typescript [part_2]; è la stessa roba che ho scritto sopra ma in typescript
     // let bookName = this.m_bookNameModel.nativeElement.innerHTML;
 
+    // pippo contiene l'itnero oggetto books passato nell'html e con .name filtro la chiave che mi serve
     let bookName = pippo.name;
     console.log("nome cliccato: " + bookName);
 

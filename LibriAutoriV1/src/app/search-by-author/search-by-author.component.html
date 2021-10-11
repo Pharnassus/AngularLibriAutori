@@ -110,6 +110,8 @@
                         <i class="fas fa-book"></i>
                       </div>
                       <div class="m_containerContentInCard">
+                        <!-- al click passo l'intero oggetto books[i] alla funzione openModal() -->
+                        <!-- poi in .ts passo un paramentro alla funzione e filtro da li per nome -->
                         <strong #m_bookNameModel class="m_pointerToModal" (click)="openModal(books)">{{books.name}}</strong>
                       </div>
                     </li>
