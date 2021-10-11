@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { SearchBooksV1 } from './search-books-v1/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MinispinnerComponent } from './minispinner/minispinner.component';
+import { SearchBooksV1 } from './search-books-v1/search-books-v1.component';
 import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-author.component';
+import { SearchBooksV3IntesaStyleComponent } from './search-books-v3-intesa-style/search-books-v3-intesa-style.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-au
     SearchBooksV1,
     MinispinnerComponent,
     SearchBooksV2ByAuthors,
+    SearchBooksV3IntesaStyleComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,7 @@ import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-au
     RouterModule.forRoot(
       [
         { path: "login", component: LoginComponent },
-        { path: "home", component: SearchBooksV1 },
+        { path: "searchBooksV1", component: SearchBooksV1 },
         { path: "register", component: RegisterComponent },
         { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
       ]
