@@ -1,4 +1,4 @@
-import { LoginComponent } from './../login/login.component';
+import { LoginComponent } from '../login/login.component';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
@@ -9,7 +9,7 @@ import books_authors from '../_services/books_authors.json';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent extends LoginComponent implements OnInit, AfterViewInit{
+export class SearchBooksV1 extends LoginComponent implements OnInit, AfterViewInit{
 
   ngOnInit() {
 

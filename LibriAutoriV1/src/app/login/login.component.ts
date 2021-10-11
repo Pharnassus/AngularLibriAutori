@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
+import { SearchBooksV1 } from '../search-books-v1/home.component';
 
 //IMPORTO IL JSON PER POTERLO USARE IN PAGINA
 import users from '../_services/users.json';
