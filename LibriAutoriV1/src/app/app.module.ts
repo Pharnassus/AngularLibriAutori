@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MinispinnerComponent } from './minispinner/minispinner.component';
 import { SearchBooksV1 } from './search-books-v1/search-books-v1.component';
 import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-books-v2-byAuthors.component';
+import { SearchBooksV3IntesaStyleComponent } from './search-books-v3-intesa-style/search-books-v3-intesa-style.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-books
     MinispinnerComponent,
     SearchBooksV1,
     SearchBooksV2ByAuthors,
+    SearchBooksV3IntesaStyleComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-books
         { path: "register", component: RegisterComponent },
         { path: "searchBooksV1", component: SearchBooksV1 },
         { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
+        { path: "searchByAuthorIS", component:  SearchBooksV3IntesaStyleComponent},
       ]
     ),
     AppRoutingModule
