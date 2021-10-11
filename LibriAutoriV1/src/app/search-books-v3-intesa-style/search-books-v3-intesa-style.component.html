@@ -1,3 +1,231 @@
-<p>
-  search-books-v3-intesa-style works!
-</p>
+<ng-container *ngIf="userSession">
+
+  <!-- form per la ricerca dei libri -->
+  <section id="m_formSearchBooksV2">
+    <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
+
+      <!-- barra input -->
+      <div class="m_inputSearchContainer form-floating mb-3">
+        <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
+          [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
+        <label id="m_labelError" for="m_searchBook">Start your search</label>
+      </div>
+
+      <!-- pulsante di ricerca -->
+      <div id="m_searchSpinnerContainer">
+        <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
+          <i class="fas fa-search" *ngIf="spinner == false"></i>
+          <!-- sostituzione spinner con il component -->
+          <ng-container *ngIf="spinner">
+            <minispinner></minispinner>
+          </ng-container>
+          Search
+        </button>
+      </div>
+
+    </form>
+  </section>
+
+
+  <ng-container *ngIf="cardsShow">
+
+    <!-- box delle card -->
+    <div id="m_cardContainer" class="col-lg-12 col-md-12 col-sm-11">
+      <ng-container *ngFor="let item of arrayBooks">
+
+        <!-- conutenitore per ogni songola card -->
+        <div class="m_cardStyle">
+
+          <!-- cover libro -->
+          <div id="m_coverCards">
+            <p>{{item.author.name}}</p>
+          </div>
+
+          <ng-container *ngIf="coverCards">
+            <!-- contenuto delle card -->
+            <div class="card">
+
+              <!-- striscia superiore che contiene il nome dell'autore -->
+              <div class="card-header">
+                <div class="m_containerIconInCard">
+                  <i class="fas fa-user"></i>
+                </div>
+                <div class="m_containerContentInCard">
+                  <h3>
+                    <strong>{{item.author.name}}</strong>
+                  </h3>
+                </div>
+              </div>
+
+              <!-- sezione contenuti inferiori -->
+              <ul class="list-group list-group-flush">
+
+                <!-- sezione data di nascita -->
+                <li class="m_cardContentUnderHeader list-group-item">
+                  <div class="m_containerIconInCard">
+                    <i class="fas fa-birthday-cake"></i>
+                  </div>
+                  <div class="m_containerContentInCard">
+                    <strong>{{item.author.birthDate}}</strong>
+                  </div>
+                </li>
+
+                <!-- sezione gender -->
+                <li class="m_cardContentUnderHeader list-group-item">
+                  <div class="m_containerIconInCard">
+                    <i class="fas fa-transgender-alt"></i>
+                  </div>
+                  <div class="m_containerContentInCard">
+                    <strong>{{item.author.gender}}</strong>
+                  </div>
+                </li>
+
+                <!-- sezione riconoscimenti -->
+                <li class="list-group-item">
+                  <div class="m_textCenter">
+                    <p>Awards</p>
+                  </div>
+                  <!-- ciclo nel ciclo; vedi il json per capire meglio -->
+                  <ul *ngFor="let awards of item.awards">
+                    <li class="m_cardContentUnderHeader">
+                      <div class="m_containerIconInCard">
+                        <i class="fas fa-award"></i>
+                      </div>
+                      <div class="m_containerContentInCard">
+                        <strong>{{awards}};</strong>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- sezione libri -->
+                <li class="list-group-item">
+                  <div class="m_textCenter">
+                    <p>Books</p>
+                  </div>
+                  <!-- ciclo nel ciclo; vedi il json per capire meglio -->
+                  <ul *ngFor="let books of item.books; index as i">
+                    <li class="m_cardContentUnderHeader">
+                      <div class="m_containerIconInCard">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="m_containerContentInCard">
+                        <!-- al click passo l'intero oggetto books[i] alla funzione openModal() -->
+                        <!-- poi in .ts passo un paramentro alla funzione e filtro da li per nome -->
+                        <strong #m_bookNameModel class="m_pointerToModal" (click)="openModal(books)">{{books.name}}</strong>
+                      </div>
+                    </li>
+                    <li class="m_cardContentUnderHeader">
+                      <div class="m_containerIconInCard">
+                        <i class="fas fa-bookmark"></i>
+                      </div>
+                      <div class="m_containerContentInCard">
+                        <strong>{{books.genre}}</strong>
+                      </div>
+                    </li>
+                    <li class="m_cardContentUnderHeader m_listBorderBottom">
+                      <div class="m_containerIconInCard">
+                        <i class="fas fa-calendar-alt"></i>
+                      </div>
+                      <div class="m_containerContentInCard">
+                        <strong>{{books.publish_date}}</strong>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+
+              </ul>
+
+              <!-- striscia per lo scroll -->
+              <div class="m_scrollDownAdvisor">
+                <div class="m_arrowDownCont"><i class="fas fa-arrows-alt-v"></i></div>
+              </div>
+            </div>
+          </ng-container>
+
+        </div>
+
+      </ng-container>
+    </div>
+
+  </ng-container>
+</ng-container>
+
+<!-- modal libri -->
+<ng-container *ngIf="modalVisibility">
+
+  <!-- contenitore per il flex -->
+  <section id="m_modalContainer">
+    <!-- contenitore responsive -->
+    <div id="m_modal" class="row col-sm-8 g-3">
+
+      <!-- parte sinistra del modal -->
+      <div class="m_leftSideModal">
+        <ng-container *ngFor="let item of modalBookArray">
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Title</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.name}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>ISBN</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.isbn}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Genre</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.genre}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Publish Date</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.publish_date}}</strong>
+            </div>
+          </div>
+
+          <div class="m_modalInfos">
+            <div class="m_modalInfosType">
+              <p>Description</p>
+            </div>
+            <div class="m_modalInfosContent">
+              <strong>{{item.description}}</strong>
+            </div>
+          </div>
+
+        </ng-container>
+      </div>
+
+      <!-- parte destra del modal -->
+      <div class="m_rightSideModal">
+        <div class="m_exit" (click)="exitModal()">
+          <i class="far fa-times-circle"></i>
+        </div>
+
+        <ng-container *ngFor="let item of modalBookArray">
+          <div class="m_posterContainer">
+            <img [src]="item.poster" alt="Poster">
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+  </section>
+
+</ng-container>
+
