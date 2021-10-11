@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchBooksV2ByAuthors } from './search-by-author.component';
+import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors.component';
 
 describe('SearchBooksV2ByAuthors', () => {
   let component: SearchBooksV2ByAuthors;

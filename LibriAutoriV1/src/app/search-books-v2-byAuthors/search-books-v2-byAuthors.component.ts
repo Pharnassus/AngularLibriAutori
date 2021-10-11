@@ -5,8 +5,8 @@ import searchByAuthors from '../_services/searchByAuthors.json';
 
 @Component({
   selector: 'app-search-by-author',
-  templateUrl: './search-by-author.component.html',
-  styleUrls: ['./search-by-author.component.scss']
+  templateUrl: './search-books-v2-byAuthors.component.html',
+  styleUrls: ['./search-books-v2-byAuthors.component.scss']
 })
 export class SearchBooksV2ByAuthors implements OnInit {
 
