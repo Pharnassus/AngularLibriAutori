@@ -5,8 +5,8 @@ import books_authors from '../_services/books_authors.json';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './search-books-v1.component.html',
+  styleUrls: ['./search-books-v1.component.scss']
 })
 export class SearchBooksV1 implements OnInit {
 
@@ -33,8 +33,8 @@ export class SearchBooksV1 implements OnInit {
   error = 1;
   counterJson: boolean;
   cardsShow = false;
+  userSession: boolean = true;
   spinner = false;
-  //chiedi
   arrayBooks: string[] = [];
 
   //[funzione al click dentro l'input]

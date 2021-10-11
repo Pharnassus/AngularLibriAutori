@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { SearchBooksV1 } from "./search-books-v1/home.component";
+import { SearchBooksV1 } from "./search-books-v1/search-books-v1.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-by-author.component';
