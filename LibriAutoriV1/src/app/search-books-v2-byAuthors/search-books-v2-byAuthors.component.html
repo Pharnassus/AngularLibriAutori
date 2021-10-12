@@ -1,3 +1,4 @@
+<div id="testBg"></div>
 <ng-container *ngIf="userSession">
 
   <!-- form per la ricerca dei libri -->
@@ -112,7 +113,8 @@
                       <div class="m_containerContentInCard">
                         <!-- al click passo l'intero oggetto books[i] alla funzione openModal() -->
                         <!-- poi in .ts passo un paramentro alla funzione e filtro da li per nome -->
-                        <strong #m_bookNameModel class="m_pointerToModal" (click)="openModal(books)">{{books.name}}</strong>
+                        <strong #m_bookNameModel class="m_pointerToModal"
+                          (click)="openModal(books)">{{books.name}}</strong>
                       </div>
                     </li>
                     <li class="m_cardContentUnderHeader">

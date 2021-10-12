@@ -1,5 +1,20 @@
 @import "../../styles.scss";
 
+#testBg {
+  //aggiunge l'effetto patina sul background
+  background: linear-gradient(rgba(26, 25, 25, 0.5), rgba(10, 10, 10, 0.5)), url('https://wallpaperaccess.com/full/2964941.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 #m_formSearchBooksV2 {
   display: flex;
   justify-content: center;
@@ -16,7 +31,7 @@
         text-align: center;
         box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
 
-        &:focus{
+        &:focus {
           box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1) !important;
           box-shadow: none;
         }
