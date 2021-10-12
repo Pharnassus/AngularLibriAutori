@@ -11,6 +11,7 @@ import { MinispinnerComponent } from './minispinner/minispinner.component';
 import { SearchBooksV1 } from './search-books-v1/search-books-v1.component';
 import { SearchBooksV2ByAuthors } from './search-books-v2-byAuthors/search-books-v2-byAuthors.component';
 import { SearchBooksV3IntesaStyleComponent } from './search-books-v3-intesa-style/search-books-v3-intesa-style.component';
+import { NavIntesaSanpaoloComponent } from './nav-intesa-sanpaolo/nav-intesa-sanpaolo.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { SearchBooksV3IntesaStyleComponent } from './search-books-v3-intesa-styl
     SearchBooksV1,
     SearchBooksV2ByAuthors,
     SearchBooksV3IntesaStyleComponent,
+    NavIntesaSanpaoloComponent,
   ],
   imports: [
     BrowserModule,

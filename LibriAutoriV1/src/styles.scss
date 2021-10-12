@@ -3,15 +3,15 @@ $testColor2: rgb(21, 211, 31);
 
 $bannerSuccessColor: rgb(33, 37, 41);
 $bannerSuccessTextColor: white;
-$linkLoginRegisterColor: white;
+$linkLoginRegisterColor: black;
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   // padding: 0;
 }
 
-body{
+body {
   //aggiunge l'effetto patina sul background
   // background: linear-gradient(rgba(26, 25, 25, 0.5), rgba(10, 10, 10, 0.5)), url('https://wallpaperaccess.com/full/2964941.jpg');
   background-size: cover;
@@ -19,7 +19,7 @@ body{
   height: 100vh;
 }
 
-ul{
+ul {
   padding: 0;
 }
 
@@ -28,3 +28,17 @@ li {
   list-style: none;
 }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 !important;
+}

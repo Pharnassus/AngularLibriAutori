@@ -1,0 +1,35 @@
+#m_navIntesaPositionV3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav {
+  background-color: #207700;
+  display: block;
+  height: 55px;
+  margin-bottom: 20px;
+
+  .navbar-nav {
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    color: white !important;
+    align-items: center;
+
+    .m_navElements {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+
+      a {
+        color: white !important;
+
+        h2 {
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+}

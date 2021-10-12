@@ -185,8 +185,8 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
           this.modalVisibility = true;
           // fa sparire le carte
           this.cardsShow = false;
-        }
 
+        }
       }
     }
   }

@@ -1,7 +1,9 @@
+<nav-intesa-sanpaolo></nav-intesa-sanpaolo>
+
 <ng-container *ngIf="userSession">
 
   <!-- form per la ricerca dei libri -->
-  <section id="m_formSearchBooksV2">
+  <section id="m_formSearchBooksV3">
     <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
 
       <!-- barra input -->
@@ -9,19 +11,19 @@
         <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
           [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
         <label id="m_labelError" for="m_searchBook">Start your search</label>
+        <!-- pulsante di ricerca -->
+        <div id="m_searchSpinnerContainer">
+          <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
+            <i class="fas fa-search" *ngIf="spinner == false"></i>
+            <!-- sostituzione spinner con il component -->
+            <ng-container *ngIf="spinner">
+              <minispinner></minispinner>
+            </ng-container>
+          </button>
+        </div>
       </div>
 
-      <!-- pulsante di ricerca -->
-      <div id="m_searchSpinnerContainer">
-        <button type="submit" class="btn btn-primary" (click)="searchBookFunction()">
-          <i class="fas fa-search" *ngIf="spinner == false"></i>
-          <!-- sostituzione spinner con il component -->
-          <ng-container *ngIf="spinner">
-            <minispinner></minispinner>
-          </ng-container>
-          Search
-        </button>
-      </div>
+
 
     </form>
   </section>
@@ -112,7 +114,8 @@
                       <div class="m_containerContentInCard">
                         <!-- al click passo l'intero oggetto books[i] alla funzione openModal() -->
                         <!-- poi in .ts passo un paramentro alla funzione e filtro da li per nome -->
-                        <strong #m_bookNameModel class="m_pointerToModal" (click)="openModal(books)">{{books.name}}</strong>
+                        <strong #m_bookNameModel class="m_pointerToModal"
+                          (click)="openModal(books)">{{books.name}}</strong>
                       </div>
                     </li>
                     <li class="m_cardContentUnderHeader">
@@ -228,4 +231,3 @@
   </section>
 
 </ng-container>
-

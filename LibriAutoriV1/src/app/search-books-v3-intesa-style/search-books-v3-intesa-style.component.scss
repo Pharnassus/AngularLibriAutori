@@ -1,6 +1,10 @@
 @import "../../styles.scss";
 
-#m_formSearchBooksV2 {
+.row {
+  justify-content: center;
+}
+
+#m_formSearchBooksV3 {
   display: flex;
   justify-content: center;
 
@@ -9,52 +13,69 @@
     justify-content: center;
 
     .m_inputSearchContainer {
-      width: 60%;
+      width: 100%;
       padding-right: 0;
 
       input {
-        text-align: center;
-        box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
-
-        &:focus{
-          box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1) !important;
-          box-shadow: none;
-        }
-      }
-
-    }
-
-    // sezione pulsante login
-    #m_searchSpinnerContainer {
-      width: 20%;
-      padding-left: 0;
-
-      button {
-        vertical-align: inherit;
-        padding: 1.02rem .75rem;
-        background-color: white;
-        color: black;
-        border: 1px solid gray;
-        box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
+        position: relative;
+        text-align: left;
+        border-radius: 40px;
+        border-color: green;
+        padding-left: 25px;
+        // box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
 
         &:focus {
+          // box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1) !important;
+          border-color: green;
           box-shadow: none;
-          box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
+        }
+
+      }
+
+      label {
+        padding-left: 25px;
+      }
+
+      // sezione pulsante login
+      #m_searchSpinnerContainer {
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-left: 0;
+
+        button {
+          vertical-align: inherit;
+          padding: 1.02rem 1.3rem;
+          background-color: white;
+          color: black;
+          border: 1px solid gray;
+          border-radius: 40px;
+          border-color: green;
+          // box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
+
+          &:focus {
+            box-shadow: none;
+            border-color: green;
+            // box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
+          }
+        }
+
+
+        span {
+          margin-right: 5px;
+        }
+
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          color: #0d92fe;
+          cursor: pointer;
         }
       }
-
-
-      span {
-        margin-right: 5px;
-      }
-
-      a {
-        text-decoration: none;
-        font-size: 18px;
-        color: #0d92fe;
-        cursor: pointer;
-      }
     }
+
+
   }
 }
 
@@ -93,14 +114,18 @@
   // }
 
   .m_cardStyle {
-    background: black;
+    // background: black;
     overflow-y: scroll;
     width: 21rem;
     height: 370px;
     margin-bottom: 40px;
     margin-right: 40px;
-    border: 1px solid black;
+    // border: 1px solid black;
     border-radius: 28px 3px 3px 30px;
+
+    &:hover{
+      box-shadow: 0px 0px 24px -4px rgb(32, 119, 0);
+    }
 
     &:hover #m_coverCards {
       visibility: hidden;
@@ -119,26 +144,28 @@
 
     // cursore
     &::-webkit-scrollbar-thumb {
-      background: black;
+      background: rgb(21, 61, 6);
       border: 1px solid white;
       border-radius: 15px;
       cursor: pointer;
 
       // cursore all'hover
       &:hover {
-        background: gray;
+        background: rgb(32, 119, 0);
       }
     }
 
     #m_coverCards {
-      background-image: linear-gradient(rgba(48, 41, 41, 0.2), rgba(10, 10, 10, 0.2)), url("../../assets/_img/ancientBook2.jpg");
+      // background-image: linear-gradient(rgba(48, 41, 41, 0.2), rgba(10, 10, 10, 0.2)), url("../../assets/_img/ancientBook2.jpg");
+      background-color: rgb(32, 119, 0);
       background-size: cover;
       background-position: center;
       width: 21rem;
       height: 370px;
       position: absolute;
+      border: 2px solid rgb(24, 63, 10);
       border-radius: 22px 3px 3px 26px;
-      box-shadow: inset 0px 0px 24px -4px rgba(186, 144, 99, 1);
+      box-shadow: inset 0px 0px 24px -4px rgb(68, 255, 0);
       z-index: 3;
       display: flex;
       justify-content: flex-end;
@@ -153,7 +180,7 @@
         font-family: 'Ephesis', cursive;
         font-size: 30px;
         font-weight: 500;
-        padding: 5px 10px;
+        padding: 15px 20px;
       }
     }
 
@@ -170,7 +197,7 @@
       }
 
       .card-header {
-        box-shadow: inset 0px 0px 24px -4px rgba(186, 144, 99, 1);
+        box-shadow: inset 0px 0px 24px -4px rgb(32, 119, 0);
       }
 
       .card-header,
@@ -267,7 +294,7 @@
     margin-top: 20px;
     padding: 20px;
     border-radius: 7px;
-    box-shadow: inset 0px 0px 24px 0px rgba(186, 144, 99, 1);
+    box-shadow: inset 0px 0px 24px 0px rgb(32, 119, 0);
 
 
     .m_leftSideModal {
@@ -289,7 +316,7 @@
 
       // cursore
       &::-webkit-scrollbar-thumb {
-        background: black;
+        background: rgb(13, 43, 3);
         border: 1px solid white;
         border-radius: 15px;
         cursor: pointer;
@@ -358,52 +385,7 @@
 //_______________________________________________________________________________________________________________________________________
 //QUERIES
 
-@media screen and (min-width: 993px) {
-  #m_formSearchBooksV2 {
-    .m_searchForm {
 
-      //input search
-      .m_inputSearchContainer {
-        margin-left: 45px !important;
-      }
-
-    }
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  #m_formSearchBooksV2 {
-    .m_searchForm {
-
-      //input search
-      .m_inputSearchContainer {
-        width: 60%;
-      }
-
-      // sezione pulsante login
-      #m_searchSpinnerContainer {
-        width: 20%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 992px) {
-  #m_formSearchBooksV2 {
-    .m_searchForm {
-
-      //input search
-      .m_inputSearchContainer {
-        width: 67%;
-      }
-
-      // sezione pulsante login
-      #m_searchSpinnerContainer {
-        width: 33%;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 576px) and (min-width: 535px) {
   #m_cardContainer {
