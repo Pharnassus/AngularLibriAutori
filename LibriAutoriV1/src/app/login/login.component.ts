@@ -73,7 +73,10 @@ export class LoginComponent implements OnInit {
       }
       // [ciclo] SE TROVA CORRISPONDENZE CON TUTTI E 3 I CAMPI DI INPUT STAMPA OK E SI FERMA ALTRIMENTI AUMENTA IL COUNTER error  DI 1
       // .replace(/\s+/g, '') serve ad eliminare gli spazi bianchi prima, dopo o dentro una stringa
-      else if (users[i].user == usernameInput.replace(/\s+/g, '') && users[i].pwd == pwdInput.replace(/\s+/g, '')) {
+      else if (
+        users[i].user == usernameInput.replace(/\s+/g, '') &&
+        users[i].pwd == pwdInput.replace(/\s+/g, '')
+      ) {
 
         // per far sparire il banner di errore in caso di successivo login corretto
         this.errorState = false;
@@ -93,8 +96,8 @@ export class LoginComponent implements OnInit {
 
         // simulazione delay reindirizzamento alla home
         setTimeout(() => {
-        // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-        this.router.navigate(['/searchByAuthor']);
+          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
+          this.router.navigate(['/searchByAuthorIS']);
 
         }, 2500);
 
