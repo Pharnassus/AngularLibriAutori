@@ -145,6 +145,48 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
 
   }
 
+
+
+  // SEZIONE ACCORDEON ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  // variabili
+  testFunction: boolean;
+  accordeonVisibility: boolean = false;
+  accordeonBookArray: string[] = [];
+
+  accordeonFunction(item) {
+
+    let authorName = item.author.name;
+    console.log(authorName);
+
+    //[ciclo] cancella l'array ad ogni click cosi da non duplicarlo
+    if (this.accordeonBookArray.length >= 0) {
+      while (this.accordeonBookArray.length) {
+        this.accordeonBookArray.pop();
+      }
+    }
+
+    for (let i = 0; i < searchByAuthors.length; i++) {
+
+      if (searchByAuthors[i].author.name == authorName) {
+
+        // riempie l'array temporaneo con le informazioni che mi servono
+        this.accordeonBookArray.push(searchByAuthors[i]);
+
+        this.accordeonVisibility = true;
+
+        console.log(this.accordeonBookArray);
+
+      }
+    }
+  }
+
+  exitAccordeonFunction() {
+    this.accordeonVisibility = false;
+  }
+
+
+
   // SEZIONE MODAL ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   modalVisibility: boolean = false;

@@ -75,7 +75,7 @@
 
 //sezione cards libri
 #m_cardContainer {
-  height: 74vh;
+  height: calc(100vh - 180px);
   padding-top: 25px;
   overflow-y: scroll;
   display: flex;
