@@ -33,23 +33,32 @@
   <ng-container *ngIf="cardsShow">
     <div id="m_intesaAccordeonContainer">
 
+      <!-- nomi generati dopo la ricerca -->
       <ng-container *ngFor="let item of arrayBooks">
-
         <div class="m_contentAccordeon">
           <ng-container *ngIf="accordeonVisibility == false">
             <div class="m_headerAccordeon">
-              <h4 (click)="accordeonFunction(item)">{{item.author.name}}</h4>
+
+              <h4 (click)="accordeonFunction(item)">
+                <i class="fas fa-user"></i>
+                {{item.author.name}}
+              </h4>
               <i class="fas fa-chevron-circle-down" *ngIf="accordeonVisibility == false"></i>
             </div>
           </ng-container>
         </div>
       </ng-container>
 
+      <!-- trucchetto per il focus -->
+      <!-- cliccando su un nome si apre questa specie di modal con solo le informazioni richieste -->
       <ng-container *ngIf="accordeonVisibility">
         <ng-container *ngFor="let item of accordeonBookArray">
           <div class="m_contentAccordeon">
             <div class="m_headerAccordeon">
-              <h4 (click)="accordeonFunction(item)">{{item.author.name}}</h4>
+              <h4 (click)="exitAccordeonFunction()">
+                <i class="fas fa-user"></i>
+                {{item.author.name}}
+              </h4>
               <i class="fas fa-chevron-circle-up" *ngIf="accordeonVisibility" (click)="exitAccordeonFunction()"></i>
             </div>
             <div class="m_mainAccordeon">
