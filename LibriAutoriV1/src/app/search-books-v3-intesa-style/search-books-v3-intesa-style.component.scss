@@ -17,6 +17,7 @@
     .m_inputSearchContainer {
       width: 100%;
       padding-right: 0;
+      margin-bottom: 30px;
 
       input {
         position: relative;
@@ -85,13 +86,16 @@
 
 
 // contenuto della pagina autori
-#m_intesaAccordeonContainer {
+#m_intesaAccordeonContainer,
+#m_intesaAccordeonContainer2 {
   // background: green;
   border-radius: 7px;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 230px);
   padding: 15px;
+  padding-top: 0;
   overflow-y: scroll;
   justify-content: center;
+  border-bottom: 2px solid green;
 
   // scrollbar
   &::-webkit-scrollbar {
@@ -99,23 +103,17 @@
   }
 
   .m_contentAccordeon {
-    // background: darkgreen;
-    // padding: 2px;
 
     .m_headerAccordeon.m_margin0,
     .m_mainAccordeon.m_margin0 {
       margin: 0;
     }
 
-    .m_mainAccordeon.m_margin0 {
-      margin-top: 10px;
-    }
-
     .m_headerAccordeon {
       background-color: rgb(233, 247, 233);
       border-radius: 6px;
       border-bottom: 2.5px solid green;
-      margin-top: 15px;
+      margin-bottom: 15px;
       width: 100%;
       height: 55px;
       display: flex;
@@ -138,30 +136,35 @@
         }
       }
 
+      // decorazioni icone dell'header accordeon
       i {
         font-size: 25px;
         padding: 12px 45px;
         color: green;
       }
 
-      .fa-chevron-circle-up {
-        font-size: 25px;
+      i.fa-chevron-circle-up,
+      i.fa-chevron-circle-down {
         position: absolute;
         cursor: pointer;
-        padding: 12px 25px;
       }
+
+      i.fa-chevron-circle-up {
+        color: rgb(110, 19, 19);
+      }
+
+      // /decorazioni icone dell'header accordeon
     }
 
     .m_mainAccordeon {
-      // background: blue;
       width: 100%;
       margin-bottom: 20px;
       display: flex;
 
+      // attributi generali per biografia, libri e traguardi
       .m_mainLeft,
       .m_mainCenter,
       .m_mainRight {
-        // background: green;
         width: calc(100% / 3);
         height: calc(100vh - 315px);
         padding: 10px 20px;
@@ -186,26 +189,37 @@
         }
       }
 
+      // /attributi generali per biografia, libri e traguardi
+
+      // sezione libri
       .m_mainCenter {
         border-left: 1px solid black;
         border-right: 1px solid black;
 
-        ul{
+        ul {
           margin-top: 15px;
-        }
+          border-bottom: 1px solid green;
 
-        .m_containerIcons-Items {
-          margin-top: 0;
+          .m_containerIcons-Items {
+            margin-top: 0;
 
-          .m_pointerToModal{
-            cursor: pointer;
+            .fa-calendar-alt {
+              margin-bottom: 10px;
+            }
 
-            &:hover{
-              color: green;
+            .m_pointerToModal {
+              cursor: pointer;
+
+              &:hover {
+                color: green;
+                text-decoration: underline;
+              }
             }
           }
         }
       }
+
+      // /sezione libri
     }
   }
 }
@@ -223,10 +237,9 @@
     height: calc(100vh - 220px);
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     padding: 20px;
     border-radius: 7px;
-    box-shadow: inset 0px 0px 24px 0px rgb(32, 119, 0);
+    box-shadow: 2px 2px 8px 0px rgba(32, 119, 0, 1);
 
 
     .m_leftSideModal {
@@ -263,10 +276,11 @@
         margin-bottom: 17px;
 
         .m_modalInfosType {
-          background: rgb(186, 144, 99);
-          color: white;
+          background: #E9F7E9;
+          font-weight: 700;
           display: inline-block;
           padding: 0px 15px;
+          margin-bottom: 5px;
           border-radius: 15px;
         }
 
@@ -299,7 +313,7 @@
       }
 
       .m_posterContainer {
-        width: 80%;
+        width: 60%;
         height: 90%;
 
         img {
@@ -317,6 +331,17 @@
 
 //_______________________________________________________________________________________________________________________________________
 //QUERIES
+
+// modifica dell'immagine ad alte risoluzioni
+@media screen and (min-width: 1300px) {
+  #m_modalContainer {
+    #m_modal {
+      .m_posterContainer {
+        width: 80% !important;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 576px) and (min-width: 535px) {
   #m_cardContainer {

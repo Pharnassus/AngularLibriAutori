@@ -6,8 +6,8 @@
   <section id="m_formSearchBooksV3">
     <form class="m_searchForm row col-sm-8 g-3 needs-validation" novalidate>
 
-      <!-- barra input -->
-      <div class="m_inputSearchContainer form-floating mb-3">
+      <!-- barra input ricerca -->
+      <div class="m_inputSearchContainer form-floating">
 
         <input type="text" id="m_searchBook" class="form-control" placeholder="search by genre" maxlength="40"
           [(ngModel)]="searchBookInput" [ngModelOptions]="{standalone: true}" (click)="inputFunctionFocus()" required>
@@ -33,7 +33,7 @@
   <ng-container *ngIf="cardsShow">
     <div id="m_intesaAccordeonContainer">
 
-      <!-- nomi generati dopo la ricerca -->
+      <!-- autori generati dopo la ricerca -->
       <ng-container *ngFor="let item of arrayBooks">
         <div class="m_contentAccordeon">
           <ng-container *ngIf="accordeonVisibility == false">
@@ -43,11 +43,14 @@
                 <i class="fas fa-user"></i>
                 {{item.author.name}}
               </h4>
-              <i class="fas fa-chevron-circle-down" *ngIf="accordeonVisibility == false"></i>
+              <i class="fas fa-chevron-circle-down" *ngIf="accordeonVisibility == false"
+                (click)="accordeonFunction(item)"></i>
             </div>
           </ng-container>
         </div>
       </ng-container>
+      <!-- autori generati dopo la ricerca -->
+
 
       <!-- trucchetto per il focus -->
       <!-- cliccando su un nome si apre questa specie di modal con solo le informazioni richieste -->
@@ -57,7 +60,7 @@
 
           <div class="m_contentAccordeon">
 
-            <!-- contenuto visualizzato al termine della ricerca -->
+            <!-- autore visualizzato al termine della ricerca -->
             <div class="m_headerAccordeon m_margin0">
               <h4 (click)="exitAccordeonFunction()">
                 <i class="fas fa-user"></i>
@@ -65,11 +68,12 @@
               </h4>
               <i class="fas fa-chevron-circle-up" *ngIf="accordeonVisibility" (click)="exitAccordeonFunction()"></i>
             </div>
-            <!-- /contenuto visualizzato al termine della ricerca -->
+            <!-- /autore visualizzato al termine della ricerca -->
 
-            <!-- contenuto all'apertura -->
+            <!-- contenuto al click su un autore -->
             <div class="m_mainAccordeon m_margin0">
 
+              <!-- /sezione info autore -->
               <div class="m_mainLeft">
                 <h6>Biography</h6>
 
@@ -91,7 +95,9 @@
                   </div>
                 </div>
               </div>
+              <!-- /sezione info autore -->
 
+              <!-- sezione libri -->
               <div class="m_mainCenter">
                 <h6>Bibliography</h6>
                 <!-- [CICLO] preleva l'array di books dal json -->
@@ -131,19 +137,29 @@
                   </li>
                 </ul>
               </div>
+              <!-- /sezione libri -->
 
+              <!-- sezione riconoscimenti -->
               <div class="m_mainRight">
                 <h6>Awards</h6>
                 <!-- [CICLO] cicla award da item -->
                 <ul *ngFor="let awards of item.awards">
-                  <li> {{awards}} </li>
+                  <li>
+                    <div class="m_containerIcons-Items">
+                      <div class="m_iconArrayItems">
+                        <i class="fas fa-award"></i>
+                      </div>
+                      <div class="m_arrayItems">
+                        <p> {{awards}} </p>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
-
-
+              <!-- sezione riconoscimenti -->
 
             </div>
-            <!-- /contenuto all'apertura -->
+            <!-- /contenuto al click su un autore -->
 
           </div>
         </ng-container>
@@ -163,7 +179,7 @@
   <!-- contenitore per il flex -->
   <section id="m_modalContainer">
     <!-- contenitore responsive -->
-    <div id="m_modal" class="row col-sm-8 g-3">
+    <div id="m_modal" class="row col-sm-10 g-3">
 
       <!-- parte sinistra del modal -->
       <div class="m_leftSideModal">
