@@ -4,6 +4,30 @@
   justify-content: center;
 }
 
+// sezione sentieri pagine
+#m_pagesNavigation{
+  position: absolute;
+  top: 77px;
+  left: 75px;
+  display: flex;
+  font-style: oblique;
+
+  a{
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+      color: green;
+      text-decoration: underline;
+    }
+  }
+
+  span{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+// /sezione sentieri pagine
 
 // sezione barra di ricerca
 #m_formSearchBooksV3 {
