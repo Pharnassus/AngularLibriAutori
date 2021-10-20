@@ -78,7 +78,7 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
       ) {
         //azzerato il valore dell'input e cambiata la label, porta il counterJson a false cosi che dopo il break non entri nell'if dopo il ciclo for
         (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
-        (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'Minimum 3 Characters!';
+        (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'All Authors! To filter enter at least 3 characters';
         this.counterJson = false;
         break
       }
@@ -97,6 +97,7 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
         //fa sparire l'html delle card prima di farle ricomparire dopo
         this.cardsShow = false;
         this.accordeonVisibility = false;
+        this.modalVisibility = false;
         //switcha in false se la ricerca va a buon fine e non entra così nell'if seguente
         this.counterJson = false;
 
@@ -127,8 +128,11 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
     }
 
     if (searchBookInput == null) {
-      (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
-      (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'A research parameter is needed';
+      // (<HTMLInputElement>document.getElementById('m_searchBook')).value = '';
+      // (<HTMLInputElement>document.getElementById('m_labelError')).innerHTML = 'A research parameter is needed';
+      for (let i = 0; i < searchByAuthors.length; i++) {
+        this.arrayBooks.push(searchByAuthors[i]);
+      }
     }
 
 

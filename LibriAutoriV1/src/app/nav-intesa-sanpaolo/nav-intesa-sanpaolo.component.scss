@@ -21,16 +21,30 @@ nav {
     .m_navElements {
       width: calc(100% / 3);
       display: flex;
-      justify-content: center;
 
       a {
         color: white !important;
-
-        h2 {
-          font-weight: 600;
-          letter-spacing: 0.5px;
-        }
       }
+    }
+
+    .m_logo {
+      justify-content: left;
+      padding-left: 25px;
+
+      h2 {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .m_center{
+      justify-content: center;
+    }
+
+    .m_userLogin{
+      justify-content: right;
+      padding-right: 25px;
     }
   }
 }
+
