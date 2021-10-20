@@ -80,6 +80,7 @@
 
   }
 }
+
 // /sezione barra di ricerca
 
 
@@ -100,6 +101,15 @@
   .m_contentAccordeon {
     // background: darkgreen;
     // padding: 2px;
+
+    .m_headerAccordeon.m_margin0,
+    .m_mainAccordeon.m_margin0 {
+      margin: 0;
+    }
+
+    .m_mainAccordeon.m_margin0 {
+      margin-top: 10px;
+    }
 
     .m_headerAccordeon {
       background-color: rgb(233, 247, 233);
@@ -143,13 +153,63 @@
     }
 
     .m_mainAccordeon {
-      background: white;
+      // background: blue;
       width: 100%;
       margin-bottom: 20px;
-      // display: none;
+      display: flex;
+
+      .m_mainLeft,
+      .m_mainCenter,
+      .m_mainRight {
+        // background: green;
+        width: calc(100% / 3);
+        height: calc(100vh - 315px);
+        padding: 10px 20px;
+        overflow-y: scroll;
+
+        // scrollbar
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        h6 {
+          text-align: center;
+        }
+
+        .m_containerIcons-Items {
+          display: flex;
+          margin-top: 15px;
+
+          .m_iconArrayItems {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .m_mainCenter {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+
+        ul{
+          margin-top: 15px;
+        }
+
+        .m_containerIcons-Items {
+          margin-top: 0;
+
+          .m_pointerToModal{
+            cursor: pointer;
+
+            &:hover{
+              color: green;
+            }
+          }
+        }
+      }
     }
   }
 }
+
 // /contenuto della pagina autori
 
 
@@ -160,7 +220,7 @@
 
   #m_modal {
     background: white;
-    height: 65vh;
+    height: calc(100vh - 220px);
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -250,6 +310,7 @@
     }
   }
 }
+
 // /contentuto del modal al click sui libri
 
 

@@ -52,39 +52,99 @@
       <!-- trucchetto per il focus -->
       <!-- cliccando su un nome si apre questa specie di modal con solo le informazioni richieste -->
       <ng-container *ngIf="accordeonVisibility">
+        <!-- [CICLO] cicla nell'array pushato nella funzione accordeonFunction() -->
         <ng-container *ngFor="let item of accordeonBookArray">
+
           <div class="m_contentAccordeon">
-            <div class="m_headerAccordeon">
+
+            <!-- contenuto visualizzato al termine della ricerca -->
+            <div class="m_headerAccordeon m_margin0">
               <h4 (click)="exitAccordeonFunction()">
                 <i class="fas fa-user"></i>
                 {{item.author.name}}
               </h4>
               <i class="fas fa-chevron-circle-up" *ngIf="accordeonVisibility" (click)="exitAccordeonFunction()"></i>
             </div>
-            <div class="m_mainAccordeon">
+            <!-- /contenuto visualizzato al termine della ricerca -->
+
+            <!-- contenuto all'apertura -->
+            <div class="m_mainAccordeon m_margin0">
 
               <div class="m_mainLeft">
-                <p><strong>Biography</strong></p>
-                <p>compleanno: </p><strong>{{item.author.birthDate}}</strong>
-                <p>genere: </p><strong>{{item.author.gender}}</strong>
+                <h6>Biography</h6>
+
+                <div class="m_containerIcons-Items">
+                  <div class="m_iconArrayItems">
+                    <i class="fas fa-birthday-cake"></i>
+                  </div>
+                  <div class="m_arrayItems">
+                    <p>{{item.author.birthDate}}</p>
+                  </div>
+                </div>
+
+                <div class="m_containerIcons-Items">
+                  <div class="m_iconArrayItems">
+                    <i class="fas fa-transgender-alt"></i>
+                  </div>
+                  <div class="m_arrayItems">
+                    <p>{{item.author.gender}}</p>
+                  </div>
+                </div>
               </div>
 
               <div class="m_mainCenter">
-                <p><strong>Awards</strong></p>
-                <p>awards: </p>
-                <p>awards: </p>
-                <p>awards: </p>
-                <p>awards: </p>
+                <h6>Bibliography</h6>
+                <!-- [CICLO] preleva l'array di books dal json -->
+                <ul *ngFor="let books of item.books">
+
+                  <li>
+                    <div class="m_containerIcons-Items">
+                      <div class="m_iconArrayItems">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="m_arrayItems">
+                        <p class="m_pointerToModal" (click)="openModal(books)">
+                          {{books.name}}
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="m_containerIcons-Items">
+                      <div class="m_iconArrayItems">
+                        <i class="fas fa-bookmark"></i>
+                      </div>
+                      <div class="m_arrayItems">
+                        <p>{{books.genre}}</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="m_containerIcons-Items">
+                      <div class="m_iconArrayItems">
+                        <i class="fas fa-calendar-alt"></i>
+                      </div>
+                      <div class="m_arrayItems">
+                        <p>{{books.publish_date}}</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
 
               <div class="m_mainRight">
-                <p><strong>Books</strong></p>
-                <p>book.name: </p>
-                <p>genre: </p>
-                <p>year: </p>
+                <h6>Awards</h6>
+                <!-- [CICLO] cicla award da item -->
+                <ul *ngFor="let awards of item.awards">
+                  <li> {{awards}} </li>
+                </ul>
               </div>
 
+
+
             </div>
+            <!-- /contenuto all'apertura -->
+
           </div>
         </ng-container>
       </ng-container>
