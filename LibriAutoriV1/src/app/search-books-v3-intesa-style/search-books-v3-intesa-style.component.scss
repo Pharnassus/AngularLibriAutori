@@ -4,6 +4,8 @@
   justify-content: center;
 }
 
+
+// sezione barra di ricerca
 #m_formSearchBooksV3 {
   display: flex;
   justify-content: center;
@@ -78,209 +80,10 @@
 
   }
 }
-
-//sezione cards libri
-#m_cardContainer {
-  height: 69vh;
-  padding-top: 25px;
-  overflow-y: scroll;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-
-  // scrollbar
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  // // colore
-  // &::-webkit-scrollbar-track {
-  //   box-shadow: inset 10px 10px 10px rgb(99, 66, 31);
-  //   border-radius: 15px;
-  //   border: 1px solid rgb(121, 54, 9);
-  // }
-
-  // // cursore
-  // &::-webkit-scrollbar-thumb {
-  //   background: rgb(187, 108, 24);
-  //   border-radius: 15px;
-
-  //   // cursore all'hover
-  //   &:hover {
-  //     background: gray;
-  //     cursor: pointer;
-  //   }
-  // }
-
-  .m_cardStyle {
-    // background: black;
-    overflow-y: scroll;
-    width: 21rem;
-    height: 370px;
-    margin-bottom: 40px;
-    margin-right: 40px;
-    // border: 1px solid black;
-    border-radius: 28px 3px 3px 30px;
-
-    &:hover {
-      box-shadow: 0px 0px 24px -4px rgb(32, 119, 0);
-    }
-
-    &:hover #m_coverCards {
-      visibility: hidden;
-    }
-
-    // larghezza scrollbar
-    &::-webkit-scrollbar {
-      width: 7px;
-    }
-
-    // colore
-    &::-webkit-scrollbar-track {
-      box-shadow: inset 10px 10px 10px rgb(211, 205, 205);
-      border-radius: 15px;
-    }
-
-    // cursore
-    &::-webkit-scrollbar-thumb {
-      background: rgb(21, 61, 6);
-      border: 1px solid white;
-      border-radius: 15px;
-      cursor: pointer;
-
-      // cursore all'hover
-      &:hover {
-        background: rgb(32, 119, 0);
-      }
-    }
-
-    #m_coverCards {
-      // background-image: linear-gradient(rgba(48, 41, 41, 0.2), rgba(10, 10, 10, 0.2)), url("../../assets/_img/ancientBook2.jpg");
-      background-color: rgb(32, 119, 0);
-      background-size: cover;
-      background-position: center;
-      width: 21rem;
-      height: 370px;
-      position: absolute;
-      border: 2px solid rgb(24, 63, 10);
-      border-radius: 22px 3px 3px 26px;
-      box-shadow: inset 0px 0px 24px -4px rgb(68, 255, 0);
-      z-index: 3;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      p {
-        color: white;
-        font-family: 'Ephesis', cursive;
-        font-size: 30px;
-        font-weight: 500;
-        padding: 15px 20px;
-      }
-    }
-
-    // altezza minima delle card di bootstrap
-    .card {
-      min-height: 300px;
-      border-radius: 0;
-      border: 0;
-      position: relative;
-
-      &:hover .m_scrollDownAdvisor {
-        opacity: 0;
-        transition: opacity 0.5s;
-      }
-
-      .card-header {
-        box-shadow: inset 0px 0px 24px -4px rgb(32, 119, 0);
-      }
-
-      .card-header,
-      .m_cardContentUnderHeader {
-        display: flex;
-        align-items: center;
-
-        .m_containerIconInCard {
-          padding-right: 20px;
-        }
-      }
-
-      .m_cardContentUnderHeader.m_listBorderBottom {
-
-        .m_containerContentInCard {
-          margin-bottom: 15px;
-        }
-
-      }
-
-      li {
-        margin-bottom: 5px;
-
-        .m_textCenter {
-          text-align: center;
-          margin-bottom: 5px;
-
-          p {
-            font-family: 'Teko', sans-serif;
-            font-weight: 600;
-            font-size: 35px;
-            text-decoration: underline;
-          }
-        }
-
-        &.m_listBorderBottom {
-          border-bottom: 1px solid gray;
-          margin-bottom: 10px;
-          display: flex;
-          align-items: baseline;
-        }
-      }
-
-      // trasforma il puntatore nel ditino quando vai sui nomi dei libri [serve per il modal]
-      .m_pointerToModal {
-        display: block;
-        cursor: pointer;
-
-        &:hover {
-          color: #bd601a;
-        }
-      }
+// /sezione barra di ricerca
 
 
-      .m_scrollDownAdvisor {
-        width: 100%;
-        height: 20px;
-        display: flex;
-        justify-content: flex-end;
-        position: sticky;
-        bottom: 275px;
-        z-index: 2;
-        opacity: 0.8;
-        border-radius: 0 0 0 4px;
-
-        .m_arrowDownCont {
-          display: flex;
-          align-items: center;
-          height: 30px;
-          border-radius: 50%;
-          justify-content: center;
-
-          .fas {
-            color: black;
-            margin-right: 0;
-            font-size: 18px;
-          }
-        }
-      }
-    }
-  }
-}
-
+// contenuto della pagina autori
 #m_intesaAccordeonContainer {
   // background: green;
   border-radius: 7px;
@@ -319,7 +122,7 @@
         padding: 8px 45px;
         letter-spacing: 0.5px;
 
-        i{
+        i {
           padding: 0;
           margin-right: 20px;
         }
@@ -347,8 +150,10 @@
     }
   }
 }
+// /contenuto della pagina autori
 
 
+// contentuto del modal al click sui libri
 #m_modalContainer {
   display: flex;
   justify-content: center;
@@ -445,14 +250,12 @@
     }
   }
 }
-
+// /contentuto del modal al click sui libri
 
 
 
 //_______________________________________________________________________________________________________________________________________
 //QUERIES
-
-
 
 @media screen and (max-width: 576px) and (min-width: 535px) {
   #m_cardContainer {
