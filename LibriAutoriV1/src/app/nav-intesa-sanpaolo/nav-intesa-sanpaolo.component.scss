@@ -8,10 +8,11 @@
 nav {
   background-color: #207700;
   display: block;
-  height: 55px;
+  height: 65px;
   margin-bottom: 20px;
 
   .navbar-nav {
+    height: 100%;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
     color: white !important;

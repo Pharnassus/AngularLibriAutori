@@ -13,6 +13,11 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    for (let i = 0; i < searchByAuthors.length; i++) {
+      this.arrayBooks.push(searchByAuthors[i]);
+    }
+
   }
 
   // struttura json libri e autori
@@ -31,7 +36,7 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
   arrayBooks: string[] = [];
   error: number = 1;
   counterJson: boolean;
-  cardsShow: boolean = false;
+  cardsShow: boolean = true;
   coverCards: boolean = false;
   spinner: boolean = false;
   userSession: boolean = true;
@@ -91,6 +96,7 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
         this.spinner = true;
         //fa sparire l'html delle card prima di farle ricomparire dopo
         this.cardsShow = false;
+        this.accordeonVisibility = false;
         //switcha in false se la ricerca va a buon fine e non entra così nell'if seguente
         this.counterJson = false;
 

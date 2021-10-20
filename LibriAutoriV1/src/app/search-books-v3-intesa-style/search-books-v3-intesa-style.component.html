@@ -62,21 +62,33 @@
               <i class="fas fa-chevron-circle-up" *ngIf="accordeonVisibility" (click)="exitAccordeonFunction()"></i>
             </div>
             <div class="m_mainAccordeon">
-              <p>compleanno: </p><strong>{{item.author.birthDate}}</strong>
-              <p>genere: </p><strong>{{item.author.gender}}</strong>
-              <p><strong>awards</strong></p>
-              <p>awards: </p>
-              <p>awards: </p>
-              <p>awards: </p>
-              <p>awards: </p>
-              <p><strong>books</strong></p>
-              <p>book.name: </p>
-              <p>genre: </p>
-              <p>year: </p>
+
+              <div class="m_mainLeft">
+                <p><strong>Biography</strong></p>
+                <p>compleanno: </p><strong>{{item.author.birthDate}}</strong>
+                <p>genere: </p><strong>{{item.author.gender}}</strong>
+              </div>
+
+              <div class="m_mainCenter">
+                <p><strong>Awards</strong></p>
+                <p>awards: </p>
+                <p>awards: </p>
+                <p>awards: </p>
+                <p>awards: </p>
+              </div>
+
+              <div class="m_mainRight">
+                <p><strong>Books</strong></p>
+                <p>book.name: </p>
+                <p>genre: </p>
+                <p>year: </p>
+              </div>
+
             </div>
           </div>
         </ng-container>
       </ng-container>
+      <!-- /trucchetto per il focus -->
 
 
     </div>
