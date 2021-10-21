@@ -4,6 +4,27 @@
   justify-content: center;
 }
 
+#m_logo_pagina {
+  background-color: #207700;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 33px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -78.5px;
+
+  h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: white;
+    font-style: oblique;
+  }
+}
+
 // sezione sentieri pagine
 #m_pagesNavigation {
   position: absolute;
