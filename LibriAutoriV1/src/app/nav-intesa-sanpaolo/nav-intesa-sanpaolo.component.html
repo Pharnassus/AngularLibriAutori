@@ -18,7 +18,7 @@
     <div class="m_navElements m_userLogin">
       <!-- login non effettutato -->
       <ng-container *ngIf="userSession == false">
-        <div class="m_pointerUserContainer">
+        <div class="m_pointerUserContainer" (click)="openNav()">
           <a class="nav-item nav-link" routerLink="/login">
             Login
             <i class="fas fa-sign-in-alt"></i>
@@ -28,27 +28,43 @@
 
       <!-- login user effettuato -->
       <ng-container *ngIf="userSession && adminPermission == false">
-        <div class="m_pointerUserContainer">
+        <div class="m_pointerUserContainer" (click)="openNav()">
           <i class="fas fa-user-alt"></i>
           <a class="nav-item nav-link">
             User
           </a>
-          <i class="fas fa-caret-square-down"></i>
+          <i class="fas fa-caret-square-down" *ngIf="openClosedNav == false"></i>
+          <i class="fas fa-caret-square-up" *ngIf="openClosedNav"></i>
         </div>
 
       </ng-container>
 
       <!-- login admin effettuato -->
       <ng-container *ngIf="userSession && adminPermission">
-        <div class="m_pointerUserContainer">
+        <div class="m_pointerUserContainer" (click)="openNav()">
           <i class="fas fa-user-cog"></i>
           <a class="nav-item nav-link">
             Admin
           </a>
-          <i class="fas fa-caret-square-down"></i>
+          <i class="fas fa-caret-square-down" *ngIf="openClosedNav == false"></i>
+          <i class="fas fa-caret-square-up" *ngIf="openClosedNav"></i>
         </div>
       </ng-container>
     </div>
 
   </div>
 </nav>
+
+<section id="m_loginNavigationSection">
+  <ng-container *ngIf="openClosedNav">
+
+    <div class="m_navigation_content_container" *ngIf="userSession && adminPermission">
+      <a routerLink="/searchByAuthorIS">Amministrazione</a>
+    </div>
+
+    <div class="m_navigation_content_container">
+      <a routerLink="/login">LogOut</a>
+    </div>
+
+  </ng-container>
+</section>

@@ -14,6 +14,23 @@ export class NavIntesaSanpaoloComponent implements OnInit {
 
   // VARS
   userSession: boolean = true;
-  adminPermission: boolean = false;
+  adminPermission: boolean = true;
+  openClosedNav: boolean = false;
 
+  openNav() {
+    if (this.openClosedNav == false) {
+
+      document.getElementById("m_loginNavigationSection").style.height = "calc(30vh - 65px)";
+      this.openClosedNav = true;
+
+    } else {
+
+      document.getElementById("m_loginNavigationSection").style.height = "0";
+
+      setTimeout(() => {
+        this.openClosedNav = false;
+      }, 250);
+
+    }
+  }
 }

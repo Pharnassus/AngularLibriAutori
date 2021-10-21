@@ -45,22 +45,71 @@ nav {
 
     .m_userLogin {
       justify-content: right;
-      padding-right: 25px;
 
       .m_pointerUserContainer {
         display: flex;
         align-items: center;
         cursor: pointer;
+        padding: 12px 55px;
+
+      }
+
+      &:hover a{
+        text-decoration: underline;
       }
 
       i {
         font-size: 23px;
       }
 
-      .fa-caret-square-down {
+      .fa-caret-square-down,
+      .fa-caret-square-up {
         font-size: inherit;
         padding-left: 15px;
       }
     }
+  }
+}
+
+#m_loginNavigationSection {
+  background: black;
+  // background-image: linear-gradient(to bottom, #207700, #569746, #85b77d, #b5d7b3, #e9f7e9);
+  position: absolute;
+  right: 0;
+  top: 65px;
+  z-index: 2;
+  width: 250px;
+  height: 0;
+  transition: 0.5s;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+
+  // scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .m_navigation_content_container {
+    text-align: center;
+    padding: 7px 0;
+    cursor: pointer;
+
+    &:hover {
+      background: white;
+    }
+
+    &:hover a {
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  .m_navigation_content_container:first-of-type{
+    margin-top: 15px;
   }
 }
