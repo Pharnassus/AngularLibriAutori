@@ -1,56 +1,56 @@
 [
   {
-    "firstName" : "gino",
-    "lastName" : "postino",
+    "name" : "gino",
+    "surname" : "postino",
     "user" : "user",
     "email" : "user@mail.com",
     "pwd" : "user"
   },
   {
-    "firstName" : "torta",
-    "lastName" : "salata",
+    "name" : "torta",
+    "surname" : "salata",
     "user" : "pippo",
     "email" : "pippo@mail.com",
     "pwd" : "pippo"
   },
   {
-    "firstName" : "federico",
-    "lastName" : "lombrico",
+    "name" : "federico",
+    "surname" : "lombrico",
     "user" : "pluto",
     "email" : "pluto@mail.com",
     "pwd" : "pluto"
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
     "pwd" : "test"
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
     "pwd" : "test"
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
     "pwd" : "test"
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
     "pwd" : "test"
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
     "pwd" : "test"

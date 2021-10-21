@@ -21,8 +21,8 @@ export class RegisterComponent implements OnInit {
 
   //usersList sarà l'array di oggetti che potrai usare con l'*ngFor e dovrà avere la stessa struttura del json
   usersList: {
-    firstName: String,
-    lastName: String,
+    name: String,
+    surname: String,
     user: String,
     email: String,
     pwd: String
@@ -30,8 +30,8 @@ export class RegisterComponent implements OnInit {
 
 
   // VARIABILI USATE NELLA FUNZIONE SUBMIT PER RECUPERARE I DATI DALL'INPUT
-  firstName: string;
-  lastName: string;
+  name: string;
+  surname: string;
   username: string;
   email: string;
   pwd: string;
@@ -50,8 +50,8 @@ export class RegisterComponent implements OnInit {
 
   register() {
     //rinomino le variabili per una migliore lettura
-    let firstName = this.firstName;
-    let lastName = this.lastName;
+    let name = this.name;
+    let surname = this.surname;
     let usernameInput = this.username;
     let emailInput = this.email;
     let pwdInput = this.pwd;
@@ -152,8 +152,8 @@ export class RegisterComponent implements OnInit {
 
       if (this.error == 0) {
         // elimina i caratteri speciali dai vari input
-        firstName = (firstName).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
-        lastName = (lastName).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
+        name = (name).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
+        surname = (surname).replace(/[!_@&\/\\#,+()$~%'":*?<>{}\s]/g, '');
         usernameInput = (usernameInput).replace(/[!&\/\\#,+()$~%'":*?<>{}]/g, '');
         emailInput = (emailInput).toLowerCase().replace(/[!&\/\\#,+()$~%'":*?<>{}]/g, '');
         // per la password invece ci sono meno restrizioni
@@ -163,8 +163,8 @@ export class RegisterComponent implements OnInit {
 
       // una volta trovato l'oggetto con i valori test dovrà "memorizzarli"
       if (
-        users[i].firstName == "test" &&
-        users[i].lastName == "test" &&
+        users[i].name == "test" &&
+        users[i].surname == "test" &&
         users[i].user == "test" &&
         users[i].email == "test" &&
         users[i].pwd == "test" &&
@@ -179,8 +179,8 @@ export class RegisterComponent implements OnInit {
         this.errorStatePwdSpaces = false;
 
         // "memorizza" nel json
-        users[i].firstName = firstName;
-        users[i].lastName = lastName;
+        users[i].name = name;
+        users[i].surname = surname;
         users[i].user = usernameInput;
         users[i].email = emailInput;
         users[i].pwd = pwdInput;

@@ -34,12 +34,12 @@
   <form class="row g-3 needs-validation" novalidate>
 
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingFN" placeholder="username" [(ngModel)]="firstName"
+      <input type="text" class="form-control" id="floatingFN" placeholder="username" [(ngModel)]="name"
         [ngModelOptions]="{standalone: true}" required>
       <label for="floatingFN">First Name</label>
     </div>
     <div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingLN" placeholder="username" [(ngModel)]="lastName"
+      <input type="text" class="form-control" id="floatingLN" placeholder="username" [(ngModel)]="surname"
         [ngModelOptions]="{standalone: true}" required>
       <label for="floatingLN">Last Name</label>
     </div>
@@ -67,7 +67,7 @@
 
     <div id="m_loginSpinnerContainer">
       <div>
-        <button type="submit" class="btn btn-dark" (click)="register()">
+        <button type="submit" class="btn" (click)="register()">
           Submit
           <div class="m_spinnerLogin spinner-border text-light" role="status" *ngIf="spinner">
             <span class="visually-hidden">Loading...</span>

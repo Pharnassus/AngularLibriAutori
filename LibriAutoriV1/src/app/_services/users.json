@@ -1,58 +1,82 @@
 [
   {
-    "firstName" : "gino",
-    "lastName" : "postino",
+    "name" : "gino",
+    "surname" : "postino",
     "user" : "user",
     "email" : "user@mail.com",
-    "pwd" : "user"
+    "pwd" : "user",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "torta",
-    "lastName" : "salata",
+    "name" : "torta",
+    "surname" : "salata",
     "user" : "pippo",
     "email" : "pippo@mail.com",
-    "pwd" : "pippo"
+    "pwd" : "pippo",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "federico",
-    "lastName" : "lombrico",
+    "name" : "federico",
+    "surname" : "lombrico",
     "user" : "pluto",
     "email" : "pluto@mail.com",
-    "pwd" : "pluto"
+    "pwd" : "pluto",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
-    "pwd" : "test"
+    "pwd" : "test",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
-    "pwd" : "test"
+    "pwd" : "test",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
-    "pwd" : "test"
+    "pwd" : "test",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
-    "pwd" : "test"
+    "pwd" : "test",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   },
   {
-    "firstName" : "test",
-    "lastName" : "test",
+    "name" : "test",
+    "surname" : "test",
     "user" : "test",
     "email" : "test",
-    "pwd" : "test"
+    "pwd" : "test",
+    "sessionId" : "",
+    "userId" : "",
+    "admin": true
   }
 ]
