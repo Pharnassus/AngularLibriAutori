@@ -1,5 +1,11 @@
 @import "../../styles.scss";
 
+.alert-danger {
+  margin-bottom: 20px !important;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 #m_loginSuccess {
   background-color: $bannerSuccessColor;
   color: $bannerSuccessTextColor;
@@ -51,10 +57,20 @@
       align-items: flex-end;
       justify-content: space-between;
 
-      .m_spinnerLogin {
-        margin-left: 10px;
-        width: 15px;
-        height: 15px;
+      button {
+        background-color: #E9F7E9;
+        border: 1px solid green;
+
+        &:focus{
+          box-shadow: 0px 0px 5px 2px #E9F7E9;
+        }
+
+        .m_spinnerLogin {
+          margin-left: 10px;
+          width: 15px;
+          height: 15px;
+        }
+
       }
 
       span {
