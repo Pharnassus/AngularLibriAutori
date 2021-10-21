@@ -43,9 +43,25 @@
   }
 }
 
-
+// main
 #m_container_admin_crud {
-  background: green;
+  // background: green;
   width: 100%;
   height: calc(100vh - 160px);
+  padding: 15px;
+  overflow-y: scroll;
+
+  th, td{
+    text-align: center;
+
+    i{
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  // // scrollbar
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
 }
