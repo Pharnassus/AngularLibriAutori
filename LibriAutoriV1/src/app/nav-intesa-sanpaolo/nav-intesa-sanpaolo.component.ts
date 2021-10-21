@@ -20,7 +20,8 @@ export class NavIntesaSanpaoloComponent implements OnInit {
   openNav() {
     if (this.openClosedNav == false) {
 
-      document.getElementById("m_loginNavigationSection").style.height = "calc(30vh - 65px)";
+      // document.getElementById("m_loginNavigationSection").style.height = "calc(30vh - 65px)";
+      document.getElementById("m_loginNavigationSection").style.height = "106px";
       this.openClosedNav = true;
 
     } else {
