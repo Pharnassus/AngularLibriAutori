@@ -34,4 +34,5 @@ export class NavIntesaSanpaoloComponent implements OnInit {
 
     }
   }
+
 }
