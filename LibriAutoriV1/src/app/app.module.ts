@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +19,7 @@ import { AdminPrivilegesComponent } from './admin-privileges/admin-privileges.co
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     LoginComponent,
     RegisterComponent,
     MinispinnerComponent,
@@ -32,11 +34,13 @@ import { AdminPrivilegesComponent } from './admin-privileges/admin-privileges.co
     FormsModule,
     RouterModule.forRoot(
       [
+        { path: "home", component:  HomeComponent},
         { path: "login", component: LoginComponent },
         { path: "register", component: RegisterComponent },
         { path: "searchBooksV1", component: SearchBooksV1 },
         { path: "searchByAuthor", component:  SearchBooksV2ByAuthors},
         { path: "searchByAuthorIS", component:  SearchBooksV3IntesaStyleComponent},
+        { path: "admin_crud", component:  AdminPrivilegesComponent},
       ]
     ),
     AppRoutingModule
