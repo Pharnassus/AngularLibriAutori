@@ -9,10 +9,8 @@
 #m_loginSuccess {
   background-color: $bannerSuccessColor;
   color: $bannerSuccessTextColor;
-  // position: absolute;
   z-index: 2;
   height: 400px;
-  // width: 88%;
   border-radius: 7px;
   overflow: hidden;
   -webkit-box-shadow: 3px 4px 17px 4px rgba(87, 83, 83, 0.75);
@@ -40,8 +38,14 @@
 #m_formLogin {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 
   form {
+
+    .form-control:focus {
+      box-shadow: 0 0 0 0.25rem #E9F7E9;
+      border-color: gray;
+    }
 
     .alert {
       span {
@@ -57,11 +61,12 @@
       align-items: flex-end;
       justify-content: space-between;
 
+
       button {
         background-color: #E9F7E9;
         border: 1px solid green;
 
-        &:focus{
+        &:focus {
           box-shadow: 0px 0px 5px 2px #E9F7E9;
         }
 
