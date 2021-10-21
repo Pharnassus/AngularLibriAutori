@@ -9,17 +9,45 @@
     </div>
 
     <div class="m_navElements m_center">
+      <i class="fas fa-book"></i>
       <a class="nav-item nav-link" routerLink="/searchByAuthor">
-        <i class="fas fa-book"></i>
         Versions
       </a>
     </div>
 
     <div class="m_navElements m_userLogin">
-      <a class="nav-item nav-link" routerLink="/login">
-        Login
-        <i class="fas fa-sign-in-alt"></i>
-      </a>
+      <!-- login non effettutato -->
+      <ng-container *ngIf="userSession == false">
+        <div class="m_pointerUserContainer">
+          <a class="nav-item nav-link" routerLink="/login">
+            Login
+            <i class="fas fa-sign-in-alt"></i>
+          </a>
+        </div>
+      </ng-container>
+
+      <!-- login user effettuato -->
+      <ng-container *ngIf="userSession && adminPermission == false">
+        <div class="m_pointerUserContainer">
+          <i class="fas fa-user-alt"></i>
+          <a class="nav-item nav-link">
+            User
+          </a>
+          <i class="fas fa-caret-square-down"></i>
+        </div>
+
+      </ng-container>
+
+      <!-- login admin effettuato -->
+      <ng-container *ngIf="userSession && adminPermission">
+        <div class="m_pointerUserContainer">
+          <i class="fas fa-user-cog"></i>
+          <a class="nav-item nav-link">
+            Admin
+          </a>
+          <i class="fas fa-caret-square-down"></i>
+        </div>
+      </ng-container>
     </div>
 
   </div>

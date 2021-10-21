@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   errorState = false;
   errorStateEmpty = false;
   welcome = false;
-  userSession: boolean = true;
+
 
   submit() {
 
@@ -65,7 +65,10 @@ export class LoginComponent implements OnInit {
       // console.log(users[i].user);
 
       // [ciclo] controlla se gli input iniziali so vuoti o meno
-      if ((<HTMLInputElement>document.getElementById('floatingPassword')).value == '' || (<HTMLInputElement>document.getElementById('floatingInput')).value == '') {
+      if (
+        (<HTMLInputElement>document.getElementById('floatingPassword')).value == '' ||
+        (<HTMLInputElement>document.getElementById('floatingInput')).value == ''
+      ) {
         this.spinner = false;
         this.error = 0;
         this.errorStateEmpty = true;
@@ -90,8 +93,6 @@ export class LoginComponent implements OnInit {
           // se welcome è true parte l'ngIf nell'html
           this.welcome = true;
 
-          // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
-          // this.router.navigate(['/searchByAuthor']);
         }, 500);
 
         // simulazione delay reindirizzamento alla home
@@ -99,7 +100,7 @@ export class LoginComponent implements OnInit {
           // REDIRECT SULLA HOME AD AVVENUTO LOGIN [pt.3]
           this.router.navigate(['/searchByAuthorIS']);
 
-        }, 2500);
+        }, 1500);
 
         break
 

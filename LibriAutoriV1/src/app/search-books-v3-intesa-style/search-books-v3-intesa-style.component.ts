@@ -32,9 +32,8 @@ export class SearchBooksV3IntesaStyleComponent implements OnInit {
   searchBookInput: string;
   modalBook: string;
 
-  // VARIABILI USATE NELLA FUNZIONE SUBMIT PER GENERARE I BANNER ERROR o BENVENUTO
-  arrayBooks: string[] = [];
   error: number = 1;
+  arrayBooks: string[] = [];
   counterJson: boolean;
   cardsShow: boolean = true;
   coverCards: boolean = false;

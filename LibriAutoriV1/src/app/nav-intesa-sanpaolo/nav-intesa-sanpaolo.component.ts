@@ -12,4 +12,8 @@ export class NavIntesaSanpaoloComponent implements OnInit {
   ngOnInit() {
   }
 
+  // VARS
+  userSession: boolean = true;
+  adminPermission: boolean = false;
+
 }

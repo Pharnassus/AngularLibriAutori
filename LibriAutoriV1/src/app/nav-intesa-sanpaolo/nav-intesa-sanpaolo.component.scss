@@ -38,14 +38,29 @@ nav {
       }
     }
 
-    .m_center{
+    .m_center {
+      align-items: center;
       justify-content: center;
     }
 
-    .m_userLogin{
+    .m_userLogin {
       justify-content: right;
       padding-right: 25px;
+
+      .m_pointerUserContainer {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 23px;
+      }
+
+      .fa-caret-square-down {
+        font-size: inherit;
+        padding-left: 15px;
+      }
     }
   }
 }
-
