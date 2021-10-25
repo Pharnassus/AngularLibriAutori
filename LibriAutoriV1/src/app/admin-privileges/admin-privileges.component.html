@@ -34,7 +34,7 @@
           <td>{{item.email}}</td>
           <td>{{item.admin}}</td>
           <td>{{item.lastAccess}}</td>
-          <td><i class="fas fa-pen-square"></i></td>
+          <td><i class="fas fa-pen-square" *ngIf="item.admin == false"></i></td>
         </tr>
       </ng-container>
     </tbody>

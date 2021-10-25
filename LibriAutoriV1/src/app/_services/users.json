@@ -52,7 +52,7 @@
     "lastAccess" : "dd-mm-yyyy",
     "sessionId" : "",
     "userId" : "",
-    "admin": true
+    "admin": false
   },
   {
     "name" : "mike",
@@ -63,7 +63,7 @@
     "lastAccess" : "dd-mm-yyyy",
     "sessionId" : "",
     "userId" : "",
-    "admin": true
+    "admin": false
   },
   {
     "name" : "guido",
@@ -85,7 +85,7 @@
     "lastAccess" : "dd-mm-yyyy",
     "sessionId" : "",
     "userId" : "",
-    "admin": true
+    "admin": false
   },
   {
     "name" : "pino",
